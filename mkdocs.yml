@@ -1,0 +1,53 @@
+site_name: FreshBoy's Headspace
+site_author: FreshBoy
+site_description: FreshBoy's homepage, where you can find FreshBoy's blogs and projects.
+
+theme: 
+  name: material
+  palette:
+    primary: amber
+    scheme: slate
+  features:
+    - navigation.tabs
+    - navigation.path
+    - navigation.indexes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FreshBoy-cyh
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/FreshBoy_cyh
+    - icon: fontawesome/solid/envelope
+      link: mailto:yihangchen2003@gmail.com
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+nav:
+  - Homepage:
+    - index.md
+    - Friendly Links: homepage/links.md
+  - ZJU Courses:
+    - zju_courses/index.md
+    - 离散数学及其应用:
+      - zju_courses/discrete/index.md
+  - EECS:
+    - eecs/index.md
+    - DeepMIR:
+      - eecs/deepmir/index.md
+      - Lec1 Intro: eecs/deepmir/lec1_intro.md
+      - Lec2 Representations: eecs/deepmir/lec2_representations.md
+  - Linguistics:
+    - ling/index.md
+    - Middle Chinese Pronunciation:
+      - ling/mid_ch/index.md
+      - Prelude: ling/mid_ch/prelude.md
+      - Onset: ling/mid_ch/onset.md
+      - Tone & Coda: ling/mid_ch/tone.md
+      - Rime: ling/mid_ch/rime.md
