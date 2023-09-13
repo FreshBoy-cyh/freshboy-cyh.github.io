@@ -1,10 +1,10 @@
 # DeepMIR
 
-It is a note of DeepMIR, a graduate level music tech course by National Taiwan University, on __deep learning__ techniques applied to __music information research__. The note will be taken in English, and some terminologies will also be annotated with traditional Chinese.
+This is a note of DeepMIR, a graduate level music tech course by National Taiwan University, on __deep learning__ techniques applied to __music information research__. The note is taken in English, with some terminologies annotated in traditional Chinese as well.
 
 ## Assignments
 
-* HW1: singer classification (accuracy leaderboard)
+* HW1: Singer classification (accuracy leaderboard)
 * HW2: GAN-based vocoder (generation quality leaderboard)
 * HW3: Transformer-based piano MIDI generation (quality leaderboard)
 * Final Project: Music Analysis / Generation

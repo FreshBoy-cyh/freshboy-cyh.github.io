@@ -1,8 +1,6 @@
 # Onset 聲母
 
-<center>
-![Onset](./pic/onset.png)
-</center>
+<center>![Onset](./pic/onset.webp)</center>
 
 中古漢語的聲母按照發音部位來區分，分爲：唇、齒、舌、牙、喉音五類。這五類又可以繼續細分為「組」，每個組用起始的聲母命名。
 

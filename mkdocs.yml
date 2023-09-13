@@ -1,6 +1,6 @@
 site_name: FreshBoy's Headspace
 site_author: FreshBoy
-site_description: FreshBoy's homepage, where you can find FreshBoy's blogs and projects.
+site_description: FreshBoy's personal website, where you can find his notes, blogs and projects.
 
 theme: 
   name: material
@@ -29,25 +29,42 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
+extra_javascript:
+  - javascripts/katex.js 
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
+
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+
 nav:
   - Homepage:
     - index.md
-    - Friendly Links: homepage/links.md
-  - ZJU Courses:
-    - zju_courses/index.md
-    - 离散数学及其应用:
-      - zju_courses/discrete/index.md
+    - Friends: homepage/friends.md
   - EECS:
     - eecs/index.md
+    - ZJU Discrete Math:
+      - eecs/discrete/index.md
+    - ZJU C Correction: eecs/c_correction.md
     - DeepMIR:
       - eecs/deepmir/index.md
       - Lec1 Intro: eecs/deepmir/lec1_intro.md
       - Lec2 Representations: eecs/deepmir/lec2_representations.md
+      - Lec3 Timbre: eecs/deepmir/lec3_timbre.md
   - Linguistics:
     - ling/index.md
     - Middle Chinese Pronunciation:
       - ling/mid_ch/index.md
-      - Prelude: ling/mid_ch/prelude.md
       - Onset: ling/mid_ch/onset.md
       - Tone & Coda: ling/mid_ch/tone.md
       - Rime: ling/mid_ch/rime.md
+    - Hawaiian Language:
+      - ling/hawaii/index.md
+      - 夏威夷文&发音: ling/hawaii/夏威夷文&发音.md
+      - 夏威夷语语法: ling/hawaii/夏威夷语语法.md
+  - Blog:
+    - blog/index.md
+    - Failology in Math Modeling: blog/math_model.md
+    - On Studying Abroad: blog/study_abroad.md
+    - ZJU CS 大二上课程体验: blog/zjucs_2nd_autumn/index.md
+    - UG in Half an Hour: blog/ug.md
