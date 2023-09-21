@@ -16,7 +16,7 @@
         <link rel="prev" href="../discrete/">
       
       
-        <link rel="next" href="../deepmir/">
+        <link rel="next" href="../GCT634/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
@@ -51,6 +51,18 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -354,6 +366,8 @@
           
         
           
+            
+          
         
           
         
@@ -605,7 +619,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../deepmir/">DeepMIR</a>
+          <a href="../GCT634/">GCT634: Musical Applications of Machine Learning</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -616,7 +630,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          DeepMIR
+          GCT634: Musical Applications of Machine Learning
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -628,8 +642,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../deepmir/lec1_intro/" class="md-nav__link">
-        Lec1 Intro
+      <a href="../GCT634/w1_represent/" class="md-nav__link">
+        W1 Representations
       </a>
     </li>
   
@@ -642,8 +656,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../deepmir/lec2_representations/" class="md-nav__link">
-        Lec2 Representations
+      <a href="../GCT634/w2-4_classify/" class="md-nav__link">
+        W2-4 Music Classification
       </a>
     </li>
   
@@ -656,8 +670,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../deepmir/lec3_timbre/" class="md-nav__link">
-        Lec3 Timbre
+      <a href="../GCT634/lec3/" class="md-nav__link">
+        DeepMIT Lec3
       </a>
     </li>
   
@@ -1167,122 +1181,127 @@
 
 
 <h1 id="c">浙大C小程纠错本</h1>
-<p>题目来自俞欢军老师在 2021 年秋冬学期布置的作业和 PTA 上的浙大版《 C 语言程序设计（第4版）》题目集，希望能帮大家复习。</p>
+<p>题目来自俞欢军老师在 2021 年秋冬学期布置的作业和 PTA 上的浙大版《 C 语言程序设计（第4版）》题目集。嗯，是的，我刷穿了课本配套的习题集，希望能帮大家复习，但请以后的同学们不要做这种傻事。</p>
 <p>写这份文件的时候我也很稚嫩呢，需要趁我忘光 C 语言之前改改了。</p>
+<p>小题里有很多神秘的缩进格式，是因为这些题目本来就长这样。我自己写代码是按照谷歌代码规范来的。</p>
 <h2 id="_1">一、考前注意事项</h2>
 <p>避免初学者的经典错误：</p>
 <ul>
-<li>小心除法。C 语言中<code>5/9</code>等于 0，而<code>5.0/9</code>等于 0.555……</li>
+<li>小心除法。C 语言中 <code>5/9</code> 等于 0，而 <code>5.0/9</code> 等于 0.555……</li>
 <li>检查该赋值的变量是否都赋值了或者初始化了。</li>
-<li>判断相等关系是<code>==</code>不是<code>=</code>，单个等号是赋值符。</li>
-<li>for 循环的<code>for(语句1; 语句2; 语句3)</code>中是两个分号，不是逗号。</li>
-<li>do-while 循环的<code>while(循环条件);</code>最后面是有分号的。</li>
-<li>检查 switch 语句中各个 case 后面是否需要<code>break;</code>。</li>
-<li>填空题注意检查有没有通过<code>++</code>、<code>--</code>和指针对变量的修改。</li>
+<li>判断相等关系是 <code>==</code> 不是 <code>=</code> ，单个等号是赋值符。</li>
+<li>for 循环的 <code>for(语句1; 语句2; 语句3)</code> 中是两个分号，不是逗号。</li>
+<li>do-while 循环的 <code>while(循环条件);</code> 最后面是有分号的。</li>
+<li>检查 switch 语句中各个 case 后面是否需要 <code>break;</code>。</li>
+<li>填空题注意检查有没有通过 <code>++</code>、<code>--</code> 和指针对变量的修改。</li>
 <li>别忘了函数最后一般有return语句。</li>
-<li>要用 strlen( ) 等函数的话别忘了引用 string.h 头文件。</li>
+<li>要用 <code>strlen( )</code> 等函数的话别忘了引用 <code>string.h</code> 头文件。</li>
 </ul>
-<p>那些需要背诵且容易忘的知识点：</p>
+<p>那些需要背诵且容易忘的概念题：</p>
 <ul>
-<li>C程序由函数构成。</li>
+<li>C 程序由函数构成。</li>
 <li>程序设计语言必须具备数据表达和流程控制的功能。</li>
-<li>C语言中标识符由字母、数字、下划线构成，第一个字符不可以是数字。</li>
-<li>C语言生成的目标代码质量高，运行效率高。</li>
-<li>C语言是编译型语言，移植性比较不好。</li>
+<li>C 语言中标识符由字母、数字、下划线构成，第一个字符不可以是数字。</li>
+<li>C 语言生成的目标代码质量高，运行效率高。</li>
+<li>C 语言是编译型语言，移植性比较不好。</li>
 <li>算法是一组明确的解决问题的步骤，它产生结果并在有限的时间内终止，可以用自然语言、伪代码、流程图描述。</li>
-<li>算数表达式是指用算数运算符（自增、自减运算符，四则运算符，求余数运算符）连接的合C语言语法的表达式，例如<code>(i++) * j % k</code>。</li>
-<li>赋值表达式中，赋值运算符右侧的表达式的数据类型和左侧变量的类型不一样，会自动把右侧结果强制类型转换，再储存到左侧变量中。</li>
-<li>位运算是C语言的特色，可以让C实现很多汇编语言可以做到但其他高级语言不行的操作。位运算不属于逻辑表达式，即<code>a &amp; b</code>和<code>a &amp;&amp; b</code>并不是同一类运算。</li>
+<li>算数表达式是指用算数运算符（自增、自减运算符，四则运算符，求余数运算符）连接的符合 C 语言语法的表达式，例如 <code>(i++) * j % k</code>。</li>
+<li>赋值表达式中，赋值运算符右侧的表达式的数据类型和左侧变量的类型不一样，会自动把右侧结果强制类型转换，再储存到左侧变量中，例如 <code>float a = 1;</code>。</li>
+<li>位运算是 C 语言的特色，可以让 C 实现很多汇编语言可以做到但其他高级语言不行的操作。位运算不属于逻辑表达式，即 <code>a &amp; b</code> 和 <code>a &amp;&amp; b</code> 并不是同一类运算。</li>
 </ul>
 <p>常见报错信息：</p>
 <ul>
-<li>段错误，多半是scanf( )忘了加&amp;，也可能是用了空指针。</li>
-<li>运行超时，可能是因为用了太多pow( )这样很慢的函数，也可能是因为有死循环。</li>
+<li>段错误，多半是 <code>scanf( )</code> 忘了加&amp;，也可能是用了空指针。</li>
+<li>运行超时，可能是因为用了太多 <code>pow( )</code> 这样很慢的函数导致复杂度过高，也可能是因为有死循环。</li>
 <li>格式错误，就是空格、换行有问题而已，好解决。</li>
-<li>非零返回，可能是主函数最后没有<code>return 0;</code>。但如果加上了<code>return 0;</code>主函数返回值依然是很大很怪的数字，可能是因为源代码中有不严重的语法错误，程序还能正常运行一部分，但最后不正常地结束运行了。</li>
+<li>非零返回，可能是主函数最后没有 <code>return 0;</code> 。但如果加上了 <code>return 0;</code> 主函数返回值依然是很大很怪的数字，可能是因为源代码中有语法错误或未定义行为，程序直接崩溃了，或者还能正常运行一部分产生正确的输出但最后不正常地结束运行了。</li>
 </ul>
-<p>其他注意事项：</p>
+<p>其他：</p>
 <ul>
-<li>老师没教怎么用 IDE 的调试功能不代表你不需要会。非常建议平时抽五分钟时间上 B 站找个视频学一下，可以提高 debug 效率。</li>
-<li>Prof. 翁恺：“实际编程的时候有 25% 的问题出在读入数据的时候。建议着重检查 scanf( )，调试的时候要在 scanf( ) 之后立刻 printf( ) 一下，以确认 scanf( ) 真的读入了你想它读入的东西。这种在调试的时候让程序在运行中途输出一些数据来帮助我们确认程序是否按照我们所想的方式在运行的方法，就是所谓的‘输出日志’。”</li>
+<li>老师没教怎么用 IDE 的调试功能不代表我们不需要会。非常建议平时抽五分钟时间上 B 站找个视频学一下，可以提高 debug 效率。</li>
+<li>翁恺老师：“实际编程的时候有 25% 的问题出在读入数据的时候。建议着重检查 <code>scanf( )</code>，调试的时候要在 <code>scanf( )</code> 之后立刻 <code>printf( )</code> 一下，以确认 <code>scanf( )</code> 真的读入了你想它读入的东西。这种在调试的时候让程序在运行中途输出一些数据来帮助我们确认程序是否按照我们所想的方式在运行的方法，就是所谓的‘输出日志’。”</li>
 <li>这门课的考试题目有很多坑题，考试的时候应该稳一点，把自己当成电脑，要在草稿纸上跟踪程序中每个变量的一步步变化。切忌自以为理解了代码的用意就想当然地写下一个答案，很可能这段程序里藏了小 bug。</li>
 <li>这门课考试是有题库的，会考往年真题，所以考前最好刷一下学解卖的往年真题，再记住那些坑题、难题，说不定考试的时候能捡回几分。</li>
-<li>来不及刷完真题也别太焦虑。我就没刷真题，最后绩点还是有 4.8 / 5.0，只要知识点理解了就不会有大问题。~~当然你要是跟图灵班卷王一样非 5.0 / 5.0 不可那当我没说。~~</li>
+<li>来不及刷完真题也别太焦虑。我就没刷真题，最后绩点还是有 4.8 / 5.0，只要知识点理解了就不会有大问题。</li>
 </ul>
 <h2 id="_2">二、理论考</h2>
+<p>有判断、选择、填空题。</p>
 <ol>
-<li>
-<p>有一函数$y=\begin{cases}
-1,&amp;\text{x&gt;0}\
-0,&amp;\text{x=0}\
+<li>有一函数 $y=
+\begin{cases}
+1,&amp;\text{x&gt;0}\\
+0,&amp;\text{x=0}\\
 -1,&amp;\text{x&lt;0}
-\end{cases}$用C语言表示，以下程序段中错误的是（ C ）。
-<div class="highlight"><pre><span></span><code><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">//首先，这个分号就让第一个if语句提前结束了</span>
+\end{cases}$ 用 C 语言表示，以下程序段中错误的是（ C ）。</li>
+</ol>
+<div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 首先，这个分号就让第一个if语句提前结束了</span>
 <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<div class="highlight"><span class="filename">D</span><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">//这个else语句跟if(x &gt; 0)</span>
-<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">//这个else语句跟if(x &gt;= 0)</span>
+<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这个else语句跟if(x &gt; 0)</span>
+<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这个else语句跟if(x &gt;= 0)</span>
 </code></pre></div>
-if-else 嵌套 if-else 时，else 语句跟离它最近的那个不带 else 语句的 if 语句。想让 else 跟前面离它更远的 if，可以把后面的 if 用 { } 括起来，剩 else 在大括号外，如下：
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="c1">//这个else语句跟的是if(x &gt;= 0)</span>
+<p>if-else 嵌套 if-else 时，else 语句跟离它最近的那个不带 else 语句的 if 语句。想让 else 跟前面离它更远的 if，可以把后面的 if 用 { } 括起来，剩 else 在大括号外，如下：</p>
+<div class="highlight"><span class="filename">示例</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="c1">// 这个else语句跟的是 if (x &gt;= 0)</span>
 </code></pre></div>
-也可以用一个<code>else;</code>的空语句让后面的 if 不能再跟 else，接下来的 else 就会跟前面的 if。
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">else</span><span class="p">;</span><span class="w"> </span><span class="c1">//这个else空语句跟的是if(x &gt; 0)</span>
-<span class="k">else</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="c1">//这个else语句跟的是if(x &gt;= 0)</span>
-</code></pre></div></p>
-</li>
-<li>
-<p>设变量已正确定义，则以下（ C ）是合法的 switch 语句。
-<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="n">op</span><span class="p">){</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="p">}</span>
+<p>也可以用一个 <code>else;</code> 的空语句让后面的 if 不能再跟 else，接下来的 else 就会跟前面的 if。这样写代码真是丑极了，如果不是为了出考题恶心本科生谁会这样写呢？</p>
+<div class="highlight"><span class="filename">示例</span><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="p">;</span><span class="w"> </span><span class="c1">// 这个else空语句跟的是if(x &gt; 0)</span>
+<span class="k">else</span>
+<span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="c1">// 这个else语句跟的是if(x &gt;= 0)</span>
 </code></pre></div>
-不合法，不能有两个带一样常量的 case。这里<code>*</code>用了两次。
-<div class="highlight"><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">){</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div>
-合法（符合 C 语言语法），只是会一直 default 而已。</p>
-</li>
-<li>
-<p>写出满足下列条件的C表达式：</p>
-</li>
+<ol>
+<li>设变量已正确定义，则以下（ C ）是合法的 switch 语句。</li>
 </ol>
-<p>“year 是闰年，即 year 能被 4 整除但不能被 100 整除，或 year 能被 400 整除。”一种正确解答：<code>year%4==0 &amp;&amp; year%100!=0 || year%400==0</code>可以这么记：<code>||</code>长得更高，优先级却反而比<code>&amp;&amp;</code>低。当然，记不住这个优先级是很正常的，写代码的人最好考虑到读代码的人的感受。所以更好的解答是：<code>((year%4==0) &amp;&amp; (year%100!=0)) || (year%400==0)</code></p>
+<div class="highlight"><span class="filename">B</span><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 不合法，不能有两个带一样常量的 case。这里 * 用了两次</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="sc">&#39;/&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 合法，只是会一直 default 而已</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<ol>
+<li>写出满足下列条件的C表达式：</li>
+</ol>
+<p>“year 是闰年，即 year 能被 4 整除但不能被 100 整除，或 year 能被 400 整除。”</p>
+<p>一种正确解答：<code>year%4==0 &amp;&amp; year%100!=0 || year%400==0</code></p>
+<p>可以这么记：<code>||</code> 长得更高，优先级却反而比 <code>&amp;&amp;</code> 低。但是记不住这个优先级是很正常的，写代码的人最好考虑到读代码的人的感受，更好的解答是：<code>((year%4==0) &amp;&amp; (year%100!=0)) || (year%400==0)</code></p>
 <ol>
 <li>在C程序运行过程中，其值不能被改变的量称为常量，其值可以改变的量称为变量。（✔️）</li>
 </ol>
-<p>有些同学学到后来会把“标识符”和“变量”搞混，以为标识符就是变量名。标识符是用户编程时使用的名字，用于给变量、常量、函数等命名，以建立起名称与实体之间的关系。<img alt="" src="https://cdn.nlark.com/yuque/0/2022/jpeg/25775350/1652962262468-67220a9a-e64e-4711-acd2-3417ba8b8b64.jpeg" /></p>
+<p>有些同学学到后来会把“标识符”和“变量”搞混，以为标识符就是变量名。标识符是用户编程时使用的名字，用于给变量、常量、函数等命名，以建立起名称与实体之间的关系。</p>
+<p><center><img alt="标识符和变量" src="var.png" /></center></p>
 <ol>
-<li>
-<p>为了检查以下 if-else 语句的两个分支是否正确，至少需要设计 3 组测试用例。（✔️）
-<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">15</span><span class="p">){</span><span class="w"> </span>
+<li>为了检查以下 if-else 语句的两个分支是否正确，至少需要设计 3 组测试用例。（✔️）</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">2.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">10.5</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-测试的时候一定要单独测试临界点。尽管这里 x 等于 15 的情况也是进入<code>if(x &lt;= 15)</code>的分支，但必须单独测试，也就是需要 x 小于 / 等于 / 大于 15，三种测试用例。</p>
-</li>
-<li>
-<p>以下程序段的功能是输出 1～100 之间每个整数的各位数字之和。（❌）
+<p>测试的时候一定要单独测试临界点。尽管这里 x 等于 15 的情况也是进入 <code>if (x &lt;= 15)</code> 的分支，但必须单独测试，也就是需要 x 小于 / 等于 / 大于 15，三种测试用例。</p>
+<ol>
+<li>以下程序段的功能是输出 1～100 之间每个整数的各位数字之和。（❌）</li>
+</ol>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="o">++</span><span class="p">){</span><span class="w"> </span>
 <span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">do</span><span class="p">{</span>
@@ -1292,13 +1311,11 @@ if-else 嵌套 if-else 时，else 语句跟离它最近的那个不带 else 语�
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w"> </span>
 <span class="p">}</span>
 </code></pre></div>
-这个会进入死循环，一直输出 1，因为 do-while 直接用了 num，导致 num被反复归零。正确的做法是用另一个变量 n 储存每次循环中 num 的值，用 n 进行 do-while 语句内部的操作。</p>
-</li>
-<li>
-<p>若变量已正确定义，以下 while 循环正常结束时，累加到pi的最后一项item的值满足（ A ）。</p>
-</li>
+<p>这个会进入死循环，一直输出 1，因为 do-while 直接用了 num，导致 num被反复归零。正确的做法是用另一个变量 n 储存每次循环中 num 的值，用 n 进行 do-while 语句内部的操作。</p>
+<ol>
+<li>若变量已正确定义，以下 while 循环正常结束时，累加到pi的最后一项item的值满足（ A ）。</li>
 </ol>
-<p>A. item 的绝对值小于 0.0001C. item 的绝对值大于等于 0.0001
+<p>A. item 的绝对值小于 0.0001C. item 的绝对值大于等于 0.0001</p>
 <div class="highlight"><pre><span></span><code><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="n">denominator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.0</span><span class="p">;</span>
@@ -1310,15 +1327,15 @@ if-else 嵌套 if-else 时，else 语句跟离它最近的那个不带 else 语�
 <span class="w">  </span><span class="n">denominator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">denominator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-甲处 item 的绝对值恰好大于 0.0001 时，回到乙后，再进入循环，在甲处计算出一个绝对值小于 0.0001 的新 item 再加上去，然后才结束循环。</p>
+<p>甲处 item 的绝对值恰好大于 0.0001 时，回到乙后，再进入循环，在甲处计算出一个绝对值小于 0.0001 的新 item 再加上去，然后才结束循环。</p>
 <ol>
-<li>在函数调用<code>Func(exp1, exp2+exp3, exp4*exp5)</code>中，实参的数量是（ A ）</li>
+<li>在函数调用 <code>Func(exp1, exp2+exp3, exp4*exp5)</code> 中，实参的数量是（ A ）</li>
 </ol>
 <p>A. 3实参的定义说了实参可以是常量/变量/表达式。这里 exp1、exp2+exp3、exp4*exp5 各算一个实参。</p>
 <ol>
 <li>下列程序的输出结果是( C )。</li>
 </ol>
-<p>C. (3,6)
+<p>C. (3,6)</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1336,50 +1353,59 @@ if-else 嵌套 if-else 时，else 语句跟离它最近的那个不带 else 语�
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-最后的f(k)的确是f(3)，但因为函数f( )中有静态局部变量，其值在f( )每次运行后会保留，并影响下一次调用f( )，所以不能套用前面算过的f(3)=3。</p>
+<p>最后的f(k)的确是f(3)，但因为函数f( )中有静态局部变量，其值在f( )每次运行后会保留，并影响下一次调用f( )，所以不能套用前面算过的f(3)=3。</p>
 <ol>
 <li>以下正确的函数定义形式是（ A ）。</li>
 </ol>
-<p>A. <code>double fun(int x, int y)</code>B. <code>double fun(int x ; int y)</code>C. <code>double fun(int x, int y);</code>D. <code>double fun(int x, y)</code>这里问的“函数定义形式”是指函数定义时函数首部的形式，问“函数声明形式”才应该选C。函数定义/声明时，参数表中的参数之间是逗号，且每个参数都需要单独声明其数据类型。
+<p>A. <code>double fun(int x, int y)</code></p>
+<p>B. <code>double fun(int x ; int y)</code></p>
+<p>C. <code>double fun(int x, int y);</code></p>
+<p>D. <code>double fun(int x, y)</code></p>
+<p>这里问的“函数定义形式”是指函数定义时函数首部的形式，问“函数声明形式”才应该选C。函数定义/声明时，参数表中的参数之间是逗号，且每个参数都需要单独声明其数据类型。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">sayhello</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">//这一行是函数声明</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">sayhello</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这一行是函数声明</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="n">sayhello</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">//这一行是函数调用</span>
+<span class="w">    </span><span class="n">sayhello</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这一行是函数调用</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c1">//下面这一块是函数定义</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">sayhello</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="c1">//第一行称为函数首部，包括返回值类型声明、函数名、参数表</span>
+<span class="c1">// 下面这一块是函数定义</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">sayhello</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="c1">// 第一行称为函数首部，包括返回值类型声明、函数名、参数表</span>
 <span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <ol>
-<li><code>08</code>是正确的整型常量。（❌）</li>
+<li><code>08</code> 是正确的整型常量。（❌）</li>
 </ol>
 <p>0开头表示这个常量是八进制的，0x开头表示是十六进制的。八进制中不会出现8这个数码，因为数到8就该进位了。</p>
 <ol>
-<li>表达式<code>!x</code>等价于<code>x!=1</code>。（❌）</li>
+<li>表达式 <code>!x</code> 等价于 <code>x!=1</code> 。（❌）</li>
 </ol>
-<p>C语言关系表达式中，不止1，所有除0之外的数，包括非0浮点数，都表示true。只有0表示false。当x为0时，<code>!x</code>的值是1；当x非0时，<code>!x</code>的值是0。所以<code>!x</code>等价于<code>x==0</code>。很多程序员会用<code>!x</code>代替<code>x==0</code>，因为位运算是最快的运算。</p>
+<p>C语言关系表达式中，不止1，所有除0之外的数，包括非0浮点数，都表示true。只有0表示false。当x为0时，<code>!x</code> 的值是1；当x非0时，<code>!x</code> 的值是0。所以 <code>!x</code> 等价于 <code>x==0</code>。很多程序员会用 <code>!x</code> 代替 <code>x==0</code>，因为位运算是最快的运算。</p>
 <ol>
-<li>表达式<code>(z=0, (x=2)||(z=1),z)</code>的值是（ 0 ）</li>
+<li>表达式 <code>(z=0, (x=2)||(z=1), z)</code> 的值是（ 0 ）</li>
 </ol>
-<p>用printf( )打印这个逗号表达式的值，输出0。整个逗号表达式的值是最后一个分句的值。在||处，x=2的返回值是2，表示true，所以整个逻辑表达式的值一定是true，所以后面的z=1就不执行了，直接返回整个逻辑表达式的值为1。如果||左边是x=0，返回0，就得继续执行z=1才能判断整个逻辑表达式是true还是false，逻辑表达式的值为1。这种只计算逻辑表达式的一部分就已经能确定整个逻辑表达式的值的现象称为“逻辑短路”。</p>
+<p>用 <code>printf( )</code> 打印这个逗号表达式的值，输出 0。整个逗号表达式的值是最后一个分句的值。在 <code>||</code> 处，<code>x=2</code> 的返回值是 2，表示 true，所以整个逻辑表达式的值一定是 true，所以后面的 <code>z=1</code> 就不执行了，直接返回整个逻辑表达式的值为 1。如果 <code>||</code> 左边是 <code>x=0</code>，返回 0，就得继续执行 <code>z=1</code> 才能判断整个逻辑表达式是 true 还是 false ，逻辑表达式的值为 1。这种只计算逻辑表达式的一部分就已经能确定整个逻辑表达式的值的现象称为“逻辑短路”。</p>
 <ol>
-<li>设字符型变量x的值是064，表达式<code>~x ^ x &lt;&lt; 2 &amp; x</code>的值是（ 0333 ）</li>
+<li>设字符型变量 x 的值是064，表达式 <code>~x ^ x &lt;&lt; 2 &amp; x</code> 的值是（ 0333 ）</li>
 </ol>
-<p>按运算符优先级，~最高，其次&lt;&lt;，其次&amp;，其次^。064是0开头，说明是八进制，转成二进制的一个Byte进行位运算，为00110100。先算<code>~x</code>，按位取反，11001011。再算<code>x&lt;&lt;2</code>，左移2位，00110100&lt;&lt;2即为11010000。然后<code>x&lt;&lt;2</code>的结果和<code>x</code>执行&amp;按位与，11010000&amp;00110100，即为00010000。最后<code>~x</code>的结果与00010000按位异或，11001011^00010000，为11011011，即为8进制0333。</p>
+<p>按运算符优先级，~最高，其次&lt;&lt;，其次&amp;，其次^。064是0开头，说明是八进制，转成二进制的一个Byte进行位运算，为00110100。先算 <code>~x</code>，按位取反，11001011。再算 <code>x&lt;&lt;2</code> ，左移2位，00110100&lt;&lt;2即为11010000。然后<code>x&lt;&lt;2</code>的结果和<code>x</code>执行&amp;按位与，11010000&amp;00110100，即为00010000。最后 <code>~x</code> 的结果与00010000按位异或，11001011^00010000，为11011011，即为8进制0333。</p>
 <blockquote>
-<p>这种题也就考考大学生，真写代码的时候写成这样肯定被同事打死。😈
-——Prof. 翁恺</p>
+<p>这种题也就考考大学生，真写代码的时候写成这样肯定被同事打死。</p>
+<p>——翁恺先生</p>
 </blockquote>
 <ol>
 <li>定义各变量及初始化如下：<code>int a = 2, b = 3, c = 1, d, x=10;</code></li>
 </ol>
-<p><code>printf("%d", d = a &gt; b);</code> 输出( 0 )⬆️赋值的优先级低于关系运算，这里会先算<code>a &gt; b</code>输出0表示false，再把0赋值给d，整个表达式的值就是最后赋值表达式中赋的值，也就是0。<code>printf("%d", b–1 == a != c);</code> 输出( 0 )⬆️判断相等/不相等是从左到右运算的。先算<code>b-1 == a</code>，成立，输出1表示true；再算<code>1 != c</code>，不成立，输出0表示false。<code>printf("%d", 3 &lt;= x &lt;= 5);</code> 输出( 1 )⬆️关系运算从左往右运算。先算<code>3 &lt;= x</code>，输出1表示true；再算<code>1 &lt;= 5</code>，输出1表示true。</p>
+<p><code>printf("%d", d = a &gt; b);</code> 输出( 0 )</p>
+<p>⬆️赋值的优先级低于关系运算，这里会先算 <code>a &gt; b</code> 输出0表示false，再把0赋值给d，整个表达式的值就是最后赋值表达式中赋的值，也就是0。</p>
+<p><code>printf("%d", b–1 == a != c);</code> 输出( 0 )</p>
+<p>⬆️判断相等/不相等是从左到右运算的。先算 <code>b-1 == a</code>，成立，输出1表示true；再算<code>1 != c</code>，不成立，输出0表示false。</p>
+<p><code>printf("%d", 3 &lt;= x &lt;= 5);</code> 输出( 1 )</p>
+<p>⬆️关系运算从左往右运算。先算 <code>3 &lt;= x</code>，输出1表示true；再算 <code>1 &lt;= 5</code>，输出1表示true。</p>
 <ol>
 <li>下述对C语言字符数组的描述中错误的是（ C ）。</li>
 </ol>
@@ -2151,6 +2177,8 @@ Thanks.
 </code></pre></div>
 在scanf( )后面输出了hh、mm、ss，发现只有hh是正常的，原因是读入格式%d%d%d不对。平时这样写可以正常读入三个整数，那是因为scanf( )把空格和制表符当作正常的分隔符，会自动跳过它们去读数字；而冒号是scanf( )不认识的分隔符，要让scanf( )知道应该跳过冒号去找下一个数字，就得在读入格式中把冒号写出来。想深入了解的话，可以去google一下scanf( )的实现方式。</p>
 
+
+  
 
 
 

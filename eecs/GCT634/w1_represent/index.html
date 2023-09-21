@@ -13,24 +13,24 @@
       
       
       
-        <link rel="prev" href="../c_correction/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="lec1_intro/">
+        <link rel="next" href="../w2-4_classify/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
     
     
       
-        <title>DeepMIR - FreshBoy's Headspace</title>
+        <title>W1 Representations - FreshBoy's Headspace</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -48,9 +48,21 @@
     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-XXXXXXXXXX"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-XXXXXXXXXX",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -73,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deepmir" class="md-skip">
+        <a href="#week-1-audio-data-representations" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +99,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="FreshBoy&#39;s Headspace" class="md-header__button md-logo" aria-label="FreshBoy's Headspace" data-md-component="logo">
+    <a href="../../.." title="FreshBoy&#39;s Headspace" class="md-header__button md-logo" aria-label="FreshBoy's Headspace" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -106,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DeepMIR
+              W1 Representations
             
           </span>
         </div>
@@ -174,7 +186,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         Homepage
       </a>
     </li>
@@ -192,7 +204,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         EECS
       </a>
     </li>
@@ -208,7 +220,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../ling/" class="md-tabs__link">
+      <a href="../../../ling/" class="md-tabs__link">
         Linguistics
       </a>
     </li>
@@ -224,7 +236,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../blog/" class="md-tabs__link">
+      <a href="../../../blog/" class="md-tabs__link">
         Blog
       </a>
     </li>
@@ -252,7 +264,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="FreshBoy&#39;s Headspace" class="md-nav__button md-logo" aria-label="FreshBoy's Headspace" data-md-component="logo">
+    <a href="../../.." title="FreshBoy&#39;s Headspace" class="md-nav__button md-logo" aria-label="FreshBoy's Headspace" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -291,7 +303,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../..">Homepage</a>
+          <a href="../../..">Homepage</a>
           
             <label for="__nav_1">
               <span class="md-nav__icon md-icon"></span>
@@ -314,7 +326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../homepage/friends/" class="md-nav__link">
+      <a href="../../../homepage/friends/" class="md-nav__link">
         Friends
       </a>
     </li>
@@ -354,6 +366,8 @@
           
         
           
+            
+          
         
           
         
@@ -362,7 +376,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">EECS</a>
+          <a href="../../">EECS</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -403,7 +417,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../discrete/">ZJU Discrete Math</a>
+          <a href="../../discrete/">ZJU Discrete Math</a>
           
         </div>
       
@@ -429,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../c_correction/" class="md-nav__link">
+      <a href="../../C/" class="md-nav__link">
         ZJU C Correction
       </a>
     </li>
@@ -468,8 +482,8 @@
       
         
         
-        <div class="md-nav__link md-nav__link--index md-nav__link--active">
-          <a href="./">DeepMIR</a>
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">GCT634: Musical Applications of Machine Learning</a>
           
             <label for="__nav_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -480,7 +494,7 @@
       <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_4">
           <span class="md-nav__icon md-icon"></span>
-          DeepMIR
+          GCT634: Musical Applications of Machine Learning
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -490,10 +504,86 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          W1 Representations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        W1 Representations
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-sheet-music-symbolic-representations" class="md-nav__link">
+    1. Sheet Music &amp; Symbolic Representations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-audio-representation" class="md-nav__link">
+    2. Audio Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-math-in-stft-frequency-temporal-resolution" class="md-nav__link">
+    3. Math in STFT: Frequency &amp; Temporal Resolution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
-      <a href="lec1_intro/" class="md-nav__link">
-        Lec1 Intro
+      <a href="../w2-4_classify/" class="md-nav__link">
+        W2-4 Music Classification
       </a>
     </li>
   
@@ -506,22 +596,8 @@
   
   
     <li class="md-nav__item">
-      <a href="lec2_representations/" class="md-nav__link">
-        Lec2 Representations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="lec3_timbre/" class="md-nav__link">
-        Lec3 Timbre
+      <a href="../lec3/" class="md-nav__link">
+        DeepMIT Lec3
       </a>
     </li>
   
@@ -571,7 +647,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ling/">Linguistics</a>
+          <a href="../../../ling/">Linguistics</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -618,7 +694,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ling/mid_ch/">Middle Chinese Pronunciation</a>
+          <a href="../../../ling/mid_ch/">Middle Chinese Pronunciation</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -641,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ling/mid_ch/onset/" class="md-nav__link">
+      <a href="../../../ling/mid_ch/onset/" class="md-nav__link">
         Onset
       </a>
     </li>
@@ -655,7 +731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ling/mid_ch/tone/" class="md-nav__link">
+      <a href="../../../ling/mid_ch/tone/" class="md-nav__link">
         Tone & Coda
       </a>
     </li>
@@ -669,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ling/mid_ch/rime/" class="md-nav__link">
+      <a href="../../../ling/mid_ch/rime/" class="md-nav__link">
         Rime
       </a>
     </li>
@@ -712,7 +788,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../ling/hawaii/">Hawaiian Language</a>
+          <a href="../../../ling/hawaii/">Hawaiian Language</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -735,7 +811,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E6%96%87%26%E5%8F%91%E9%9F%B3/" class="md-nav__link">
+      <a href="../../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E6%96%87%26%E5%8F%91%E9%9F%B3/" class="md-nav__link">
         夏威夷文&发音
       </a>
     </li>
@@ -749,7 +825,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E8%AF%AD%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+      <a href="../../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E8%AF%AD%E8%AF%AD%E6%B3%95/" class="md-nav__link">
         夏威夷语语法
       </a>
     </li>
@@ -806,7 +882,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../blog/">Blog</a>
+          <a href="../../../blog/">Blog</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -829,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/math_model/" class="md-nav__link">
+      <a href="../../../blog/math_model/" class="md-nav__link">
         Failology in Math Modeling
       </a>
     </li>
@@ -843,7 +919,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/study_abroad/" class="md-nav__link">
+      <a href="../../../blog/study_abroad/" class="md-nav__link">
         On Studying Abroad
       </a>
     </li>
@@ -857,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/zjucs_2nd_autumn/" class="md-nav__link">
+      <a href="../../../blog/zjucs_2nd_autumn/" class="md-nav__link">
         ZJU CS 大二上课程体验
       </a>
     </li>
@@ -871,7 +947,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../blog/ug/" class="md-nav__link">
+      <a href="../../../blog/ug/" class="md-nav__link">
         UG in Half an Hour
       </a>
     </li>
@@ -912,15 +988,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assignments" class="md-nav__link">
-    Assignments
+  <a href="#1-sheet-music-symbolic-representations" class="md-nav__link">
+    1. Sheet Music &amp; Symbolic Representations
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#links" class="md-nav__link">
-    Links
+  <a href="#2-audio-representation" class="md-nav__link">
+    2. Audio Representation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-math-in-stft-frequency-temporal-resolution" class="md-nav__link">
+    3. Math in STFT: Frequency &amp; Temporal Resolution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    Summary
   </a>
   
 </li>
@@ -940,22 +1030,149 @@
                   
 
 
-<h1 id="deepmir">DeepMIR</h1>
-<p>This is a note of DeepMIR, a graduate level music tech course by National Taiwan University, on <strong>deep learning</strong> techniques applied to <strong>music information research</strong>. The note is taken in English, with some terminologies annotated in traditional Chinese as well.</p>
-<h2 id="assignments">Assignments</h2>
+<h1 id="week-1-audio-data-representations">Week 1: Audio Data Representations</h1>
+<p><center><img alt="MIDI pipeline" src="../pic/midi_pipeline.webp" /></center></p>
+<p>At each stage of the music performing pipeline, different representations are needed. The formats of music in the pic above, from left to right, are sheet music, symbolic representation and audio representation.</p>
+<h2 id="1-sheet-music-symbolic-representations">1. Sheet Music &amp; Symbolic Representations</h2>
+<p>Traditional <strong>sheet music</strong> supports and music timing score only, and can be stored in <strong>MusicXML</strong> format. Musicians may vary the tempo, dynamics, and articulation, resulting in a personal performance of the given musical score. So sheet music is rarely directly used as input to neural network models.</p>
+<p>Piano roll is a kind of <strong>symbolic representation</strong> as a visual, image-like representation of music, and can be stored in <strong>MIDI</strong> format. It can contain rich performance information and supports both score and performance, either music timing (after quantization) or absolute timing. It is more convenient to be used as input to neural networks, and datasets of MIDI files are easily accessible.</p>
+<p>Tools:</p>
 <ul>
-<li>HW1: Singer classification (accuracy leaderboard)</li>
-<li>HW2: GAN-based vocoder (generation quality leaderboard)</li>
-<li>HW3: Transformer-based piano MIDI generation (quality leaderboard)</li>
-<li>Final Project: Music Analysis / Generation</li>
+<li><a href="https://salu133445.github.io/muspy/index.html">MusPy</a> is an all-in-one lib for symbolic music generation.</li>
+<li><a href="https://salu133445.github.io/pypianoroll/">PyPianoroll</a> can intuitively manipulate MIDI files as piano rolls.</li>
+<li><a href="https://github.com/YatingMusic/miditoolkit">Miditoolkit</a> is designed for handling MIDI in symbolic timing (ticks), which is the native format of MIDI timing.</li>
+<li><a href="https://github.com/craffel/pretty-midi">PrettyMIDI</a> can parse MIDI files and generate pianorolls in absolute timing.</li>
+<li><a href="https://github.com/Natooz/MidiTok">MidiTok</a> can take care of converting (tokenizing) your MIDI files into tokens, ready to be fed to models such as Transformer, for any generation, transcription or MIR task</li>
+<li>MuseScore is a software that can manipulate the music files in MIDI, MusicXML and audio formats.</li>
 </ul>
-<h2 id="links">Links</h2>
+<h2 id="2-audio-representation">2. Audio Representation</h2>
+<p>Audios also have 2 kinds of representations. They can be visualized as <strong>waveforms</strong> stored in *.wav files, but it does not show the components with different frequencies in the audio. By applying discrete short-time fourier transform and other transforms, the waveform can be transformed into time-frequency representation, called <strong>spectrogram</strong>.</p>
+<p><center><img alt="wav &amp; stft" src="../pic/wav_stft.webp" /></center></p>
+<p>Audio Representations in Spectrogram:</p>
 <ul>
-<li><a href="https://github.com/affige/DeepMIR">Course Material on GitHub</a></li>
-<li><a href="https://mirdata.readthedocs.io/en/latest/">MIR Dataset</a></li>
-<li><a href="https://www.audiolabs-erlangen.de/resources/MIR/FMP/C0/C0.html">Fundamentals of Music Processing Notebood</a></li>
+<li>Short-Time Fourier Transform (STFT): directly generated by applying discrete short-time fourier transform to waveforms, represent linearly-spaced time, magnitude and frequencies</li>
+<li>Constant-Q Transform (CQT): logarithmic frequency, logarithmic magnitude</li>
+<li>Pitch Class Profile / Chromagram: a 12-element feature vector indicating how much energy of each pitch class, {C, C#, D, D#, E, ..., B}, is present in the signal, ignoring the octaves</li>
+<li>Mel-Spectrogram: the mel scale is a perceptual scale of pitches judged by listeners to be equal in distance from one another, with finer resolution in the low-frequency range (NOT exactly logarithmic scale)</li>
 </ul>
+<p>Different spectrograms are used as input to CNN to deal with different tasks of music feature extraction.</p>
+<ul>
+<li>Timbre representation: Spectrogram → Mel-Spectrogram → MFCC</li>
+<li>Pitch representation: Spectrogram → CQT → Chroma Feature</li>
+</ul>
+<p><center><img alt="spectrograms" src="../pic/spectrograms.webp" /></center></p>
+<p>Dataset:</p>
+<ul>
+<li><a href="https://www.freesound.org">Freesound</a></li>
+</ul>
+<p>Tools:</p>
+<ul>
+<li><a href="http://www.sonicvisualiser.org/">Sonic Visualiser</a> is like an Adobe Audition adapted for music</li>
+<li><a href="https://librosa.org/doc/latest/index.html">librosa</a> is a acoustic python package for music and audio analysis</li>
+<li><a href="https://pytorch.org/audio/0.11.0/tutorials/audio_feature_extractions_tutorial.html">torchaudio</a> implements feature extractions commonly used in the audio domain</li>
+</ul>
+<h2 id="3-math-in-stft-frequency-temporal-resolution">3. Math in STFT: Frequency &amp; Temporal Resolution</h2>
+<p><strong>Sampling Rate</strong>: number of samples per second in a piece of audio.</p>
+<p>Nyquist–Shannon Sampling Theorem: A signal must be sampled at least twice as fast as the bandwidth of the signal to accurately reconstruct the waveform; otherwise, the high-frequency content will alias at a frequency inside the spectrum of interest. So in music with <code>sr = 44.1k Hz</code>, we cannot hear frequency higher than <code>44.1k / 2 = 22.05k Hz</code>. To avoid aliasing, the analog music signal need to be lowpass filtered before sampling.</p>
+<p><strong>Quantization</strong>: Round the amplitude to the nearest discrete steps.</p>
+<p>Bit depth is the number of bits used to represent the amplitude at one sampling point. It determines dynamic range of digital signals. $Dynamic range = 20\log_{10}\frac{\max}{\min}$</p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Sampling Rate</th>
+<th>Bit Depth</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Consumer Audio (CD)</td>
+<td>44.1kHz</td>
+<td>16bits</td>
+</tr>
+<tr>
+<td>Speech Audio</td>
+<td>8/16 kHz</td>
+<td>8/16 bits</td>
+</tr>
+<tr>
+<td>Professional Audio: 48/96/192 kHz</td>
+<td>24/32 bits</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
+<p>Much basic audio processing is done in MATLAB. These code can help understanding the concepts in this section.</p>
+<div class="highlight"><span class="filename">basic manipulation</span><pre><span></span><code><span class="p">[</span><span class="n">a</span><span class="p">,</span><span class="n">sr</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">wavread</span><span class="p">(</span><span class="s">&#39;...&#39;</span><span class="p">)</span><span class="w"> </span><span class="c">% sr = sampling rate </span>
+<span class="nb">length</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="c">% length of the signal in &#39;number of samples&#39;</span>
+<span class="nb">length</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">/</span><span class="n">sr</span><span class="w"> </span><span class="c">% length of the signal in &#39;seconds&#39;</span>
 
+<span class="n">a2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">downsample</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span>
+<span class="n">sr2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">sr</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="nb">length</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span><span class="w"> </span><span class="c">% length of the signal in &#39;number of samples&#39;</span>
+<span class="nb">length</span><span class="p">(</span><span class="n">a2</span><span class="p">)</span><span class="o">/</span><span class="n">sr2</span><span class="w"> </span><span class="c">% length of the signal in ‘seconds’</span>
+<span class="n">wavwrite</span><span class="p">(</span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">sr2</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;test.wav&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">sinusoids</span><pre><span></span><code><span class="n">sr</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">200</span><span class="p">;</span>
+<span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="o">/</span><span class="n">sr</span><span class="p">:</span><span class="mi">1</span><span class="p">;</span>
+<span class="n">f0</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c">% frequency</span>
+<span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c">% amplitude</span>
+<span class="n">y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">pi</span><span class="o">*</span><span class="n">f0</span><span class="o">*</span><span class="n">t</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+<span class="nb">stem</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Fourier transfrom</strong> can get the spectrum of a whole piece of signal. But since the music signal is not constant, it makes no sense to analyze the spectrum of a whole song. <strong>Short Time Fourier Transform</strong> (STFT) is a windowed version of fourier transform that analyze the signal divided into small windows, so that we can represent the feature of a music audio in each short period. <code>win_size</code> is defined as the size of the window, and <code>hop_size</code> is defined as the distance between the starting of two adjacent windows. They are not necessary to be the same.</p>
+<p>Understanding STFT</p>
+<ul>
+<li>Shorter window → worse frequency resolution, longer window → worse temporal resolution</li>
+<li><code>f_max = sr / 2</code>, because of Nyquist–Shannon Sampling Theorem</li>
+<li><code>freq_resolution = sr / win_size</code></li>
+<li><code>temporal_resolution = hop_size</code></li>
+</ul>
+<p><center><img alt="Different win_size" src="../pic/win_size.png" /></center></p>
+<div class="highlight"><span class="filename">forier transform</span><pre><span></span><code><span class="n">Y</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">abs</span><span class="p">(</span><span class="nb">fft</span><span class="p">(</span><span class="n">y</span><span class="p">));</span><span class="w"> </span><span class="c">% To get the spectrum of a signal</span>
+<span class="n">spectrogram</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="n">window</span><span class="p">,</span><span class="w"> </span><span class="n">noverlap</span><span class="p">,</span><span class="w"> </span><span class="n">nfft</span><span class="p">)</span><span class="w"> </span><span class="c">% Render the spectrogram of a signal</span>
+<span class="n">spectrogram</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">sr</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;yaxis&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="summary">Summary</h2>
+<p><center><figure markdown>
+<img alt="conversion of reps" src="../pic/conversion_of_reps.webp" /></p>
+<figcaption>Representations of Musical Scores and their Relations</figcaption>
+<p></figure></center></p>
+<p>Terminology Reference:</p>
+<details>
+<summary>Sheet Music</summary>
+<ul>
+<li>meter: 節拍</li>
+<li>tempo: 節奏, measures the speed</li>
+<li>dynamics: 力度, measures how hard a part of music is played</li>
+<li>articulation: 奏法</li>
+<li>Articulation Marks: denote how certain notes are to be played, including marks in the pic below
+<img alt="Artic Marks" src="../pic/artic_mark.webp" /></li>
+</ul>
+</details>
+<details>
+<summary>Piano Roll</summary>
+<ul>
+<li>MIDI note number (0-127): pitch of the sound, can be calculate using the fundamental frequency of the note</li>
+<li>Key velocity (0-127): intensity, not speed</li>
+<li>MIDI channel: different instruments</li>
+<li>Time stamp: how many clock pulses or ticks to wait before the command is executed</li>
+<li>Clock pulses / ticks: basic time units subdivided from quarter notes</li>
+<li>Pulses per quarter note (PPQN): commonly 120, determines the resolution of the time stamps associated to note events</li>
+</ul>
+</details>
+<details>
+<summary>Audio Representation</summary>
+<ul>
+<li>mono &amp; stereo, monaural &amp; binaural, 單聲道（的）、多聲道（的）</li>
+<li>Pitch class: Two notes with fundamental frequencies in a ratio of any power of two, which means they differ by octaves, are perceived as very similar. All notes with this kind of relation can be grouped under the same pitch class. e.g. pitch class C = {..., C2, C3, C4, ...}</li>
+</ul>
+</details>
+
+
+  
 
 
 
@@ -1026,13 +1243,13 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.path", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.path", "navigation.indexes"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
         
-          <script src="../../javascripts/katex.js"></script>
+          <script src="../../../javascripts/katex.js"></script>
         
       
         
