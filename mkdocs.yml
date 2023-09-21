@@ -13,13 +13,16 @@ theme:
     - navigation.indexes
 
 extra:
-  social:
+  social: # show GitHub, Twi & E-mail at footage
     - icon: fontawesome/brands/github
       link: https://github.com/FreshBoy-cyh
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/FreshBoy_cyh
     - icon: fontawesome/solid/envelope
       link: mailto:yihangchen2003@gmail.com
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
 
 markdown_extensions:
   - attr_list
@@ -29,7 +32,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
-extra_javascript:
+extra_javascript: # KaTeX
   - javascripts/katex.js 
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
@@ -45,12 +48,12 @@ nav:
     - eecs/index.md
     - ZJU Discrete Math:
       - eecs/discrete/index.md
-    - ZJU C Correction: eecs/c_correction.md
-    - DeepMIR:
-      - eecs/deepmir/index.md
-      - Lec1 Intro: eecs/deepmir/lec1_intro.md
-      - Lec2 Representations: eecs/deepmir/lec2_representations.md
-      - Lec3 Timbre: eecs/deepmir/lec3_timbre.md
+    - ZJU C Correction: eecs/C/index.md
+    - 'GCT634: Musical Applications of Machine Learning':
+      - eecs/GCT634/index.md
+      - W1 Representations: eecs/GCT634/w1_represent.md
+      - W2-4 Music Classification: eecs/GCT634/w2-4_classify.md
+      - DeepMIT Lec3: eecs/GCT634/lec3.md
   - Linguistics:
     - ling/index.md
     - Middle Chinese Pronunciation:

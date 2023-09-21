@@ -1,10 +1,10 @@
-# Lec2 Representations for Music
+# Week 1: Audio Data Representations
 
-<center>![MIDI pipeline](./pic/midi_pipeline.webp)</center>
+<center>![MIDI pipeline](pic/midi_pipeline.webp)</center>
 
 At each stage of the music performing pipeline, different representations are needed. The formats of music in the pic above, from left to right, are sheet music, symbolic representation and audio representation.
 
-## 2.1 Sheet Music & Symbolic Representations
+## 1. Sheet Music & Symbolic Representations
 
 Traditional __sheet music__ supports and music timing score only, and can be stored in __MusicXML__ format. Musicians may vary the tempo, dynamics, and articulation, resulting in a personal performance of the given musical score. So sheet music is rarely directly used as input to neural network models.
 
@@ -19,11 +19,11 @@ Tools:
 * [MidiTok](https://github.com/Natooz/MidiTok) can take care of converting (tokenizing) your MIDI files into tokens, ready to be fed to models such as Transformer, for any generation, transcription or MIR task
 * MuseScore is a software that can manipulate the music files in MIDI, MusicXML and audio formats.
 
-## 2.2 Audio Representation
+## 2. Audio Representation
 
 Audios also have 2 kinds of representations. They can be visualized as __waveforms__ stored in *.wav files, but it does not show the components with different frequencies in the audio. By applying discrete short-time fourier transform and other transforms, the waveform can be transformed into time-frequency representation, called __spectrogram__.
 
-<center>![wav & stft](./pic/wav_stft.webp)</center>
+<center>![wav & stft](pic/wav_stft.webp)</center>
 
 Audio Representations in Spectrogram:
 
@@ -37,7 +37,7 @@ Different spectrograms are used as input to CNN to deal with different tasks of 
 * Timbre representation: Spectrogram → Mel-Spectrogram → MFCC
 * Pitch representation: Spectrogram → CQT → Chroma Feature
 
-<center>![spectrograms](./pic/spectrograms.webp)</center>
+<center>![spectrograms](pic/spectrograms.webp)</center>
 
 Dataset:
 
@@ -49,9 +49,65 @@ Tools:
 * [librosa](https://librosa.org/doc/latest/index.html) is a acoustic python package for music and audio analysis
 * [torchaudio](https://pytorch.org/audio/0.11.0/tutorials/audio_feature_extractions_tutorial.html) implements feature extractions commonly used in the audio domain
 
-## 2.3 Math in STFT: Frequency & Temporal Resolution
+## 3. Math in STFT: Frequency & Temporal Resolution
 
-TBC
+__Sampling Rate__: number of samples per second in a piece of audio.
+
+Nyquist–Shannon Sampling Theorem: A signal must be sampled at least twice as fast as the bandwidth of the signal to accurately reconstruct the waveform; otherwise, the high-frequency content will alias at a frequency inside the spectrum of interest. So in music with `sr = 44.1k Hz`, we cannot hear frequency higher than `44.1k / 2 = 22.05k Hz`. To avoid aliasing, the analog music signal need to be lowpass filtered before sampling.
+
+__Quantization__: Round the amplitude to the nearest discrete steps.
+
+Bit depth is the number of bits used to represent the amplitude at one sampling point. It determines dynamic range of digital signals. $Dynamic range = 20\log_{10}\frac{\max}{\min}$
+
+<center>
+
+||Sampling Rate|Bit Depth|
+|-|-|-|
+|Consumer Audio (CD)|44.1kHz|16bits|
+|Speech Audio|8/16 kHz|8/16 bits|
+|Professional Audio: 48/96/192 kHz|24/32 bits|
+
+</center>
+
+Much basic audio processing is done in MATLAB. These code can help understanding the concepts in this section.
+
+``` matlab title='basic manipulation'
+[a,sr] = wavread('...') % sr = sampling rate 
+length(a) % length of the signal in 'number of samples'
+length(a)/sr % length of the signal in 'seconds'
+
+a2 = downsample(a,2);
+sr2 = sr/2;
+length(a2) % length of the signal in 'number of samples'
+length(a2)/sr2 % length of the signal in ‘seconds’
+wavwrite(a2, sr2, 'test.wav')
+```
+
+``` matlab title='sinusoids'
+sr = 200;
+t = 0:1/sr:1;
+f0 = 10; % frequency
+a = 1; % amplitude
+y = a*sin(2*pi*f0*t + pi/2);
+stem(t,y)
+```
+
+__Fourier transfrom__ can get the spectrum of a whole piece of signal. But since the music signal is not constant, it makes no sense to analyze the spectrum of a whole song. __Short Time Fourier Transform__ (STFT) is a windowed version of fourier transform that analyze the signal divided into small windows, so that we can represent the feature of a music audio in each short period. `win_size` is defined as the size of the window, and `hop_size` is defined as the distance between the starting of two adjacent windows. They are not necessary to be the same.
+
+Understanding STFT
+
+* Shorter window → worse frequency resolution, longer window → worse temporal resolution
+* `f_max = sr / 2`, because of Nyquist–Shannon Sampling Theorem
+* `freq_resolution = sr / win_size`
+* `temporal_resolution = hop_size`
+
+<center>![Different win_size](pic/win_size.png)</center>
+
+``` matlab title='forier transform'
+Y = abs(fft(y)); % To get the spectrum of a signal
+spectrogram(y, window, noverlap, nfft) % Render the spectrogram of a signal
+spectrogram(y, 100, 50, 100, sr, 'yaxis')
+```
 
 ## Summary
 
@@ -60,7 +116,7 @@ TBC
 <figcaption>Representations of Musical Scores and their Relations</figcaption>
 </figure></center>
 
-Terminologies:
+Terminology Reference:
 
 ??? "Sheet Music"
     * meter: 節拍
@@ -79,5 +135,5 @@ Terminologies:
     * Pulses per quarter note (PPQN): commonly 120, determines the resolution of the time stamps associated to note events
 
 ??? "Audio Representation"
-    * mono & stereo, monaural & binaural
+    * mono & stereo, monaural & binaural, 單聲道（的）、多聲道（的）
     * Pitch class: Two notes with fundamental frequencies in a ratio of any power of two, which means they differ by octaves, are perceived as very similar. All notes with this kind of relation can be grouped under the same pitch class. e.g. pitch class C = {..., C2, C3, C4, ...}
