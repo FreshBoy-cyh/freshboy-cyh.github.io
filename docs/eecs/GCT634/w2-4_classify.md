@@ -1,4 +1,4 @@
-# W2-4 Music Classification
+# Week2-4 Music Classification
 
 ## 1. Overview
 

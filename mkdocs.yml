@@ -8,9 +8,12 @@ theme:
     primary: amber
     scheme: slate
   features:
+    - navigation.top
     - navigation.tabs
     - navigation.path
+    - navigation.expand
     - navigation.indexes
+    - navigation.instant
 
 extra:
   social: # show GitHub, Twi & E-mail at footage
@@ -22,7 +25,7 @@ extra:
       link: mailto:yihangchen2003@gmail.com
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-5D9MVMM08N
 
 markdown_extensions:
   - attr_list
@@ -32,6 +35,9 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
+# plugins:
+#   - optimize
+
 extra_javascript: # KaTeX
   - javascripts/katex.js 
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
@@ -40,26 +46,27 @@ extra_javascript: # KaTeX
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
-nav:
+nav: # arrange pages in navigation bar
   - Homepage:
     - index.md
     - Friends: homepage/friends.md
   - EECS:
     - eecs/index.md
-    - ZJU Discrete Math:
-      - eecs/discrete/index.md
-    - ZJU C Correction: eecs/C/index.md
+    - ZJU C Correction: eecs/clang/index.md
+    - ZJU Discrete Math: eecs/discrete/index.md
+    - ZJU Computer Architecture:
+      - eecs/arch/index.md
+      - C1 Introduction: eecs/arch/1_intro.md
     - 'GCT634: Musical Applications of Machine Learning':
-      - eecs/GCT634/index.md
-      - W1 Representations: eecs/GCT634/w1_represent.md
-      - W2-4 Music Classification: eecs/GCT634/w2-4_classify.md
-      - DeepMIT Lec3: eecs/GCT634/lec3.md
+      - eecs/gct634/index.md
+      - W1 Representations: eecs/gct634/w1_represent.md
+      - W2-4 Music Classification: eecs/gct634/w2-4_classify.md
   - Linguistics:
     - ling/index.md
     - Middle Chinese Pronunciation:
       - ling/mid_ch/index.md
       - Onset: ling/mid_ch/onset.md
-      - Tone & Coda: ling/mid_ch/tone.md
+      - Tone & Coda: ling/mid_ch/tone_coda.md
       - Rime: ling/mid_ch/rime.md
     - Hawaiian Language:
       - ling/hawaii/index.md
