@@ -1,6 +1,6 @@
 site_name: FreshBoy's Headspace
 site_author: FreshBoy
-site_description: FreshBoy's personal website, where you can find his notes, blogs and projects.
+site_description: FreshBoy's personal website, where you can find his notes, projects and blogs.
 
 theme: 
   name: material
@@ -16,7 +16,7 @@ theme:
     - navigation.instant
 
 extra:
-  social: # show GitHub, Twi & E-mail at footage
+  social: # show GitHub, Twitter & Email at footage
     - icon: fontawesome/brands/github
       link: https://github.com/FreshBoy-cyh
     - icon: fontawesome/brands/twitter
@@ -35,32 +35,42 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
 
-# plugins:
-#   - optimize
+plugins:
+  - blog:
+      post_url_format: "{file}"
+  # - optimize
 
 extra_javascript: # KaTeX
-  - javascripts/katex.js 
-  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js  
+  - javascripts/katex.js
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js
 
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
 
-nav: # arrange pages in navigation bar
+nav:
   - Homepage:
     - index.md
+    - About Me: homepage/about_me.md
     - Friends: homepage/friends.md
   - EECS:
     - eecs/index.md
     - ZJU C Correction: eecs/clang/index.md
-    - ZJU Discrete Math: eecs/discrete/index.md
+    - ZJU Discrete Math: https://github.com/FreshBoy-cyh/ZJU_Discrete_Mathematics_and_Its_Applications_Note
     - ZJU Computer Architecture:
       - eecs/arch/index.md
       - C1 Introduction: eecs/arch/1_intro.md
+    - Music Processing Analysis:
+      - eecs/mpa/index.md
+      - 1 Representation: eecs/mpa/1_represent.md
+      - 2 Fourier Transform & 3 Audio Features: eecs/mpa/2_3_feature.md
+      - 4 Music Synchronization: eecs/mpa/4_sync.md
     - 'GCT634: Musical Applications of Machine Learning':
       - eecs/gct634/index.md
-      - W1 Representations: eecs/gct634/w1_represent.md
-      - W2-4 Music Classification: eecs/gct634/w2-4_classify.md
+      - W1 Representation: eecs/mpa/1_represent.md
+      - W2-4 Music Classification:
+        - eecs/gct634/w2-4_classify/index.md
+        - 'Ref: DeepMIR Lec3 Timbre': eecs/gct634/w2-4_classify/deepmir3.md
   - Linguistics:
     - ling/index.md
     - Middle Chinese Pronunciation:
@@ -74,7 +84,4 @@ nav: # arrange pages in navigation bar
       - 夏威夷语语法: ling/hawaii/夏威夷语语法.md
   - Blog:
     - blog/index.md
-    - Failology in Math Modeling: blog/math_model.md
-    - On Studying Abroad: blog/study_abroad.md
-    - ZJU CS 大二上课程体验: blog/zjucs_2nd_autumn/index.md
-    - UG in Half an Hour: blog/ug.md
+

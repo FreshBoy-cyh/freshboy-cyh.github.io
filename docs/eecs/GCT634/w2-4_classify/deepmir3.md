@@ -1,4 +1,4 @@
-# W2-4 Music Classification
+# DeepMIR-2023 Lec3 Timbre
 
 ## 1. General Idea
 
@@ -34,7 +34,7 @@ The functions are provided in librosa. Measures of Spectral Shape:
 * Spectral Contrast: Each frame of a spectrogram is divided into sub-bands. For each sub-band, the energy contrast is estimated by comparing the mean energy in the top quantile (peak energy) to that of the bottom quantile (valley energy). High contrast values generally correspond to clear, narrow-band signals, while low contrast values correspond to broad-band noise.
 * Spectral Rolloff: The frequency for a spectrogram bin such that at least `roll_percent` (0.85 by default) of the energy of the spectrum in a frame is contained in this bin and the bins below. This function can be used to approximate the maximum (or minimum) frequency by setting roll_percent to a value close to 1 (or 0)
 * Spectral Flux: How quickly the power spectrum of a signal is changing over time. Usually used for musical onset detection
-* Mel-frequency cepstral coefficients (MFCC): Compact representation of the spectrum (1,024-dim → 128 or 13 coefficients) produced by applying Mel Filter Bank, Log Compression, and Discrete Cosine Transform (NOT necessary to understand this process). Somehow capture the relative strength of partials (分音) without knowing the F0. Less interpretable than other measures.
+* Mel-frequency cepstral coefficients (MFCC): Compact representation of the spectrum (1,024-dim → 128 or 13 coefficients) produced by taking the absolute value of STFT, applying Mel Filter Bank, Log Compression, and Discrete Cosine Transform (NOT necessary to understand this process). Somehow capture the relative strength of partials (分音) without knowing the F0. Less interpretable than other measures.
 
 Spectral Features Can be Used to Build a Music Classifier
 
@@ -52,3 +52,6 @@ The blocks inside the black lines are trainable, and the 4 methods are called: (
 
 <center>![Different Classifiers](pic/classifiers.png)</center>
 
+Hand-designed steps in traditional ML can be replaced with trainable module:
+
+<center>![Alt text](pic/dl_mfcc.png)</center><center>![Alt text](pic/dl_chroma.png)</center>
