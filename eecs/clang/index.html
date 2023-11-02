@@ -518,7 +518,7 @@
         
           <li class="md-nav__item">
   <a href="#3-2-6-n" class="md-nav__link">
-    3. 习题2-6 求阶乘序列前N项和
+    3. 习题2-6 求阶乘序列前 N 项和
   </a>
   
 </li>
@@ -1504,7 +1504,7 @@
         
           <li class="md-nav__item">
   <a href="#3-2-6-n" class="md-nav__link">
-    3. 习题2-6 求阶乘序列前N项和
+    3. 习题2-6 求阶乘序列前 N 项和
   </a>
   
 </li>
@@ -1631,16 +1631,14 @@
 </ul>
 <h2 id="_2">二、理论考</h2>
 <p>有判断、选择、填空题。</p>
-<ol>
-<li>有一函数 
-$y=
+<p>1. 有一函数：</p>
+<p>$y=
 \begin{cases}
 1,&amp;\text{x&gt;0}\\
 0,&amp;\text{x=0}\\
 -1,&amp;\text{x&lt;0}
-\end{cases}$
-用 C 语言表示，以下程序段中错误的是（ C ）。</li>
-</ol>
+\end{cases}$</p>
+<p>用 C 语言表示，以下程序段中错误的是（ C ）。</p>
 <div class="highlight"><span class="filename">C</span><pre><span></span><code><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// 首先，这个分号就让第一个if语句提前结束了</span>
 <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -1666,9 +1664,7 @@ $y=
 <span class="k">else</span>
 <span class="w">    </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="w"> </span><span class="c1">// 这个else语句跟的是if(x &gt;= 0)</span>
 </code></pre></div>
-<ol>
-<li>设变量已正确定义，则以下（ C ）是合法的 switch 语句。</li>
-</ol>
+<p>2. 设变量已正确定义，则以下（ C ）是合法的 switch 语句。</p>
 <div class="highlight"><span class="filename">B</span><pre><span></span><code><span class="k">switch</span><span class="p">(</span><span class="n">op</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 不合法，不能有两个带一样常量的 case。这里 * 用了两次</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
 <span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
@@ -1684,20 +1680,13 @@ $y=
 <span class="w">    </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Error</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<ol>
-<li>写出满足下列条件的C表达式：</li>
-</ol>
-<p>“year 是闰年，即 year 能被 4 整除但不能被 100 整除，或 year 能被 400 整除。”</p>
+<p>3. 写出能作这个条件判断的 C 表达式：“year 是闰年，即 year 能被 4 整除但不能被 100 整除，或 year 能被 400 整除。”</p>
 <p>一种正确解答：<code>year%4==0 &amp;&amp; year%100!=0 || year%400==0</code></p>
 <p>可以这么记：<code>||</code> 长得更高，优先级却反而比 <code>&amp;&amp;</code> 低。但是记不住这个优先级是很正常的，写代码的人最好考虑到读代码的人的感受，更好的解答是：<code>((year%4==0) &amp;&amp; (year%100!=0)) || (year%400==0)</code></p>
-<ol>
-<li>在C程序运行过程中，其值不能被改变的量称为常量，其值可以改变的量称为变量。（✔️）</li>
-</ol>
+<p>4. 在C程序运行过程中，其值不能被改变的量称为常量，其值可以改变的量称为变量。（✔️）</p>
 <p>有些同学学到后来会把“标识符”和“变量”搞混，以为标识符就是变量名。标识符是用户编程时使用的名字，用于给变量、常量、函数等命名，以建立起名称与实体之间的关系。</p>
 <p><center><img alt="标识符和变量" src="var.png" /></center></p>
-<ol>
-<li>为了检查以下 if-else 语句的两个分支是否正确，至少需要设计 3 组测试用例。（✔️）</li>
-</ol>
+<p>5. 为了检查以下 if-else 语句的两个分支是否正确，至少需要设计 3 组测试用例。（✔️）</p>
 <div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">15</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
 <span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
@@ -1705,9 +1694,7 @@ $y=
 <span class="p">}</span>
 </code></pre></div>
 <p>测试的时候一定要单独测试临界点。尽管这里 x 等于 15 的情况也是进入 <code>if (x &lt;= 15)</code> 的分支，但必须单独测试，也就是需要 x 小于 / 等于 / 大于 15，三种测试用例。</p>
-<ol>
-<li>以下程序段的功能是输出 1～100 之间每个整数的各位数字之和。（❌）</li>
-</ol>
+<p>6. 以下程序段的功能是输出 1～100 之间每个整数的各位数字之和。（❌）</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w"> </span><span class="n">num</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
 <span class="w">    </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="k">do</span><span class="p">{</span>
@@ -1718,9 +1705,7 @@ $y=
 <span class="p">}</span>
 </code></pre></div>
 <p>这个会死循环，一直输出 1，因为 do-while 直接用了 num 做循环变量，导致 num 被反复归零。</p>
-<ol>
-<li>若变量已正确定义，以下 while 循环正常结束时，累加到 <code>pi</code> 的最后一项item的值满足（ A ）。</li>
-</ol>
+<p>7. 若变量已正确定义，以下 while 循环正常结束时，累加到 <code>pi</code> 的最后一项item的值满足（ A ）。</p>
 <p>A. item 的绝对值小于 0.0001</p>
 <p>C. item 的绝对值大于等于 0.0001</p>
 <div class="highlight"><pre><span></span><code><span class="n">flag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
@@ -1735,14 +1720,9 @@ $y=
 <span class="p">}</span>
 </code></pre></div>
 <p>甲处 item 的绝对值恰好大于 0.0001 时，回到乙后，再进入循环，在甲处计算出一个绝对值小于 0.0001 的新 item 再加上去，然后才结束循环。</p>
-<ol>
-<li>在函数调用 <code>Func(exp1, exp2+exp3, exp4*exp5)</code> 中，实参的数量是（ 3 ）</li>
-</ol>
+<p>8. 在函数调用 <code>Func(exp1, exp2+exp3, exp4*exp5)</code> 中，实参的数量是（ 3 ）</p>
 <p>实参可以是常量/变量/表达式。这里 <code>exp1</code>、<code>exp2+exp3</code>、<code>exp4*exp5</code> 各算一个实参。</p>
-<ol>
-<li>下列程序的输出结果是( C )。</li>
-</ol>
-<p>C. (3,6)</p>
+<p>9. 下列程序的输出结果是( <code>(3,6)</code> )。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#</span><span class="w"> </span><span class="cp">include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span>
 <span class="p">{</span>
@@ -1761,9 +1741,7 @@ $y=
 <span class="p">}</span>
 </code></pre></div>
 <p>最后的 <code>f(k)</code> 的确是 <code>f(3)</code>，但因为函数 <code>f( )</code> 中有静态局部变量，其值在 <code>f( )</code> 每次运行后会保留，并影响下一次调用 <code>f( )</code>，所以不能套用前面算过的 <code>f(3)=3</code>。</p>
-<ol>
-<li>以下正确的函数定义形式是（ A ）。</li>
-</ol>
+<p>10. 以下正确的函数定义形式是（ A ）。</p>
 <p>A. <code>double fun(int x, int y)</code></p>
 <p>B. <code>double fun(int x ; int y)</code></p>
 <p>C. <code>double fun(int x, int y);</code></p>
@@ -1784,68 +1762,47 @@ $y=
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello World!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
-<ol>
-<li><code>08</code> 是正确的整型常量。（❌）</li>
-</ol>
-<p>0开头表示这个常量是八进制的，0x开头表示是十六进制的。八进制中不会出现8这个数码，因为数到8就该进位了。</p>
-<ol>
-<li>表达式 <code>!x</code> 等价于 <code>x!=1</code> 。（❌）</li>
-</ol>
-<p>C 语言关系表达式中，不止1，所有除0之外的数，包括非0浮点数，都表示true。只有0表示false。当x为0时，<code>!x</code> 的值是1；当x非0时，<code>!x</code> 的值是0。所以 <code>!x</code> 等价于 <code>x==0</code>。很多程序员会用 <code>!x</code> 代替 <code>x==0</code>，因为位运算是最快的运算。</p>
-<ol>
-<li>表达式 <code>(z=0, (x=2)||(z=1), z)</code> 的值是（ 0 ）</li>
-</ol>
+<p>11. <code>08</code> 是正确的整型常量。（❌）</p>
+<p>0 开头表示这个常量是八进制的，0x 开头表示是十六进制的。八进制中不会出现 8 这个数码，因为数到 8 就该进位了。</p>
+<p>12. 表达式 <code>!x</code> 等价于 <code>x!=1</code> 。（❌）</p>
+<p>C 语言关系表达式中，不止 1，所有除 0 之外的数，包括非 0 浮点数，都表示 true。只有 0 表示 false。当 <code>x</code> 为 0 时，<code>!x</code> 的值是 1；当 <code>x</code> 非0时，<code>!x</code> 的值是0。所以 <code>!x</code> 等价于 <code>x==0</code>。很多程序员会用 <code>!x</code> 代替 <code>x==0</code>，因为位运算是最快的运算。</p>
+<p>13. 表达式 <code>(z=0, (x=2)||(z=1), z)</code> 的值是（ 0 ）</p>
 <p>用 <code>printf( )</code> 打印这个逗号表达式的值，输出 0。整个逗号表达式的值是最后一个分句的值。在 <code>||</code> 处，<code>x=2</code> 的返回值是 2，表示 true，所以整个逻辑表达式的值一定是 true，所以后面的 <code>z=1</code> 就不执行了，直接返回整个逻辑表达式的值为 1。如果 <code>||</code> 左边是 <code>x=0</code>，返回 0，就得继续执行 <code>z=1</code> 才能判断整个逻辑表达式是 true 还是 false ，逻辑表达式的值为 1。这种只计算逻辑表达式的一部分就已经能确定整个逻辑表达式的值的现象称为“逻辑短路”。</p>
-<ol>
-<li>设字符型变量 x 的值是064，表达式 <code>~x ^ x &lt;&lt; 2 &amp; x</code> 的值是（ 0333 ）</li>
-</ol>
-<p>按运算符优先级，~最高，其次&lt;&lt;，其次&amp;，其次^。064是0开头，说明是八进制，转成二进制的一个Byte进行位运算，为00110100。先算 <code>~x</code>，按位取反，11001011。再算 <code>x&lt;&lt;2</code> ，左移2位，00110100&lt;&lt;2即为11010000。然后<code>x&lt;&lt;2</code>的结果和<code>x</code>执行&amp;按位与，11010000&amp;00110100，即为00010000。最后 <code>~x</code> 的结果与00010000按位异或，11001011^00010000，为11011011，即为8进制0333。</p>
+<p>14. 设字符型变量 x 的值是064，表达式 <code>~x ^ x &lt;&lt; 2 &amp; x</code> 的值是（ 0333 ）</p>
+<p>按运算符优先级，<code>~</code> 最高，其次 <code>&lt;&lt;</code>，其次 <code>&amp;</code>，其次 <code>^</code>。064 是 0 开头，说明是八进制，转成二进制的一个 Byte 进行位运算，为 <code>00110100</code>。先算 <code>~x</code>，按位取反，<code>11001011</code>。再算 <code>x &lt;&lt; 2</code> ，左移 2 位，<code>00110100 &lt;&lt; 2</code> 即为 <code>11010000</code>。然后 <code>x &lt;&lt; 2</code> 的结果和 <code>x</code> 按位与，<code>11010000 &amp; 00110100</code>，即为 <code>00010000</code>。最后 <code>~x</code> 的结果与 <code>00010000</code> 按位异或，<code>11001011 ^ 00010000</code>，为 <code>11011011</code>，即为 8 进制 <code>0333</code>。</p>
 <blockquote>
-<p>这种题也就考考大学生，真写代码的时候写成这样肯定被同事打死。</p>
-<p>——翁恺先生</p>
+<p>这种题也就考考大学生，真写代码的时候写成这样肯定被同事打死。
+<p align=right>——翁恺先生</p></p>
 </blockquote>
-<ol>
-<li>定义各变量及初始化如下：<code>int a = 2, b = 3, c = 1, d, x=10;</code></li>
-</ol>
+<p>15.  定义各变量及初始化如下：<code>int a = 2, b = 3, c = 1, d, x=10;</code></p>
 <p><code>printf("%d", d = a &gt; b);</code> 输出( 0 )</p>
 <p>⬆️赋值的优先级低于关系运算，这里会先算 <code>a &gt; b</code> 输出 0 表示 false，再把 0 赋值给 d，整个表达式的值就是最后赋值表达式中赋的值，也就是 0。</p>
 <p><code>printf("%d", b–1 == a != c);</code> 输出( 0 )</p>
 <p>⬆️判断相等/不相等是从左到右运算的。先算 <code>b-1 == a</code>，成立，输出 1 表示 true；再算 <code>1 != c</code>，不成立，输出 0 表示 false。</p>
 <p><code>printf("%d", 3 &lt;= x &lt;= 5);</code> 输出( 1 )</p>
 <p>⬆️关系运算从左往右运算。先算 <code>3 &lt;= x</code>，输出1表示true；再算 <code>1 &lt;= 5</code>，输出1表示true。</p>
-<ol>
-<li>下述对C语言字符数组的描述中错误的是（ C ）。</li>
-</ol>
-<p>A.字符数组可以存放字符串</p>
-<p>B.字符数组中的字符串可以整体输入、输出</p>
-<p>C.可以在赋值语句中通过赋值运算符"="对字符数组整体赋值</p>
-<p>D.不可以用关系运算符对字符数组中的字符串进行比较</p>
+<p>16. 下述对C语言字符数组的描述中错误的是（ C ）。</p>
+<p>A. 字符数组可以存放字符串</p>
+<p>B. 字符数组中的字符串可以整体输入、输出</p>
+<p>C. 可以在赋值语句中通过赋值运算符"="对字符数组整体赋值</p>
+<p>D. 不可以用关系运算符对字符数组中的字符串进行比较</p>
 <p>我错选了 B。可以用 <code>puts( )</code> 和 <code>gets( )</code> 实现字符数组的整体输入输出，用 <code>printf("%s",str)</code> 整体输出。数组没法整体引用，每次只能用下标引用数组中的一个元素。只能在刚定义字符数组时用=给字符数组“赋值”，形如 <code>char name[MAXN] = "Kaleo";</code>，但这叫做“初始化”，和赋值的原理是不一样的。不能用=来整体赋值字符数组，要用 <code>strcpy( )</code>。同样的，字符串比较不能用关系运算符，要用 <code>strcmp( )</code>。</p>
-<ol>
-<li>有以下定义：<code>char x[ ]="abcdefg"; char y[ ]={'a', 'b', 'c', 'd', 'e', 'f', 'g'};</code>，则正确的叙述为（ C ）。</li>
-</ol>
-<p>A.数组x和数组y等价</p>
-<p>B.数组x和数组y的长度相同</p>
-<p>C.数组x的长度大于数组y的长度</p>
-<p>D.数组x的长度小于数组y的长度</p>
+<p>17.  有以下定义：<code>char x[] = "abcdefg"; char y[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g'};</code>，则正确的叙述为（ C ）。</p>
+<p>A.数组 x 和数组 y 等价</p>
+<p>B.数组 x 和数组 y 的长度相同</p>
+<p>C.数组 x 的长度大于数组 y 的长度</p>
+<p>D.数组 x 的长度小于数组 y 的长度</p>
 <p>计算字符串的长度用 <code>strlen(x)</code>，它遇到 <code>'\0'</code> 才能停止，并且不会把 <code>'\0'</code> 计入字符总数；计算数组长度用 <code>sizeof(y)</code>，会把 <code>'\0'</code> 计入数组长度。<code>x</code> 最后比 <code>y</code> 多了一个 <code>'\0'</code>，所以 <code>x</code> 数组长度比 <code>y</code> 大。这里 <code>y[ ]</code> 最后没有 <code>'\0'</code>，所以不是字符串，不能用 <code>strlen(y)</code> 算它长度，不然 <code>strlen( )</code> 函数一直没读到 <code>'\0'</code>，程序就会停不下来，最后崩溃。同样地，<code>puts( )</code> 函数遇到 <code>'\0'</code> 才会停止，忘了在字符数组结尾放 <code>'\0'</code> 也会导致程序崩溃。</p>
-<ol>
-<li><code>int c[2][ ]={{1, 2}, {3, 4}};</code>（❌）</li>
-</ol>
-<p>这样定义矩阵是错的，超过一维的数组，只有第一个指标可以是空的。像这样写编译时会报错：<code>[Error] declaration of 'c' as multidimensional array must have bounds for all dimensions except the first.</code></p>
-<ol>
-<li><code>int m, *p = &amp;m; printf("%d",p);</code>（✔️）</li>
-</ol>
+<p>18. <code>int c[2][ ]={{1, 2}, {3, 4}};</code>（❌）</p>
+<p>这样定义矩阵是错的，超过一维的数组，只有从左往右第一个 index 可以是空的。</p>
+<p>19. <code>int m, *p = &amp;m; printf("%d",p);</code>（✔️）</p>
 <p>定义变量 <code>m</code> 的时候，就已经给它分配内存空间了，只不过这块内存空间没初始化，用指针访问这块内存空间完全是可行的。用 <code>%d</code> 格式输出指针也不会出问题，只不过它是用十进制表示了指针变量指向的内存空间地址。用 <code>%p</code> 格式当然更好，是用十六进制输出的，更加专业。</p>
 <p><img alt="printf( )中用%%才可以输出单个百分号，这也是一种转义符" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649724465223-683cbb02-84e3-441e-b8f5-d47dbab8a220.png#clientId=u7e66d3f0-c702-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=291&amp;id=ub01a64e0&amp;originHeight=483&amp;originWidth=829&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=true&amp;size=115502&amp;status=error&amp;style=none&amp;taskId=u05e0dbb6-067c-4389-8aeb-e814a2ca8ca&amp;title=printf%28%20%29%E4%B8%AD%E7%94%A8%25%25%E6%89%8D%E5%8F%AF%E4%BB%A5%E8%BE%93%E5%87%BA%E5%8D%95%E4%B8%AA%E7%99%BE%E5%88%86%E5%8F%B7%EF%BC%8C%E8%BF%99%E4%B9%9F%E6%98%AF%E4%B8%80%E7%A7%8D%E8%BD%AC%E4%B9%89%E7%AC%A6&amp;width=500" title="printf( )中用%%才可以输出单个百分号，这也是一种转义符" /></p>
-<ol>
-<li>以下选项中，对基本类型相同的指针变量不能进行运算的运算符是 ( A )。</li>
-</ol>
+<p>20. 以下选项中，对基本类型相同的指针变量不能进行运算的运算符是 ( A )。</p>
 <p>A. <code>+</code>  B. <code>-</code>  C. <code>=</code>  D. <code>==</code></p>
-<p>B和D选项的用法如下：</p>
+<p>B 和 D 的用法如下：</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;I am learning C.&quot;</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="o">*</span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;两指针相隔的元素个数为%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p1</span><span class="p">);</span>
@@ -1856,14 +1813,10 @@ $y=
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-<ol>
-<li>一维数组定义的一般形式如下，其中的类型名指定数组变量的类型。（❌）</li>
-</ol>
+<p>21. 一维数组定义的一般形式如下，其中的类型名指定数组变量的类型。（❌）</p>
 <p><code>类型名 数组名[数组长度];</code>类型名是指数组元素的类型。很多同学以为“数组变量”是指数组元素，其实对于C而言，数组变量就是数组名，它的值等于数组第一个元素的内存地址。这个名字起得很奇怪，因为数组变量里有“变量”两个字，它的值却是不能改变的，是个常量。🤔</p>
-<ol>
-<li>对于以下程序段，叙述正确的是（ D ）。</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="o">=</span><span class="s">&quot;china&quot;</span><span class="p">;</span><span class="w"> </span>
+<p>22. 对于以下程序段，叙述正确的是（ D ）。</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;china&quot;</span><span class="p">;</span><span class="w"> </span>
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">;</span><span class="w"> </span>
 <span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 </code></pre></div>
@@ -1872,22 +1825,17 @@ $y=
 <p>C. 数组 <code>s</code> 的长度和 <code>p</code> 所指向的字符串长度相等</p>
 <p>D. <code>*p</code> 与 <code>s[0]</code> 相等</p>
 <p><code>s</code> 和 <code>p</code> 的数据类型不一样，<code>s</code> 是数组变量，<code>p</code> 是字符指针变量。<code>p</code> 被赋值为 <code>s</code>，也就指向了字符串（结尾带 <code>'\0'</code> 的字符数组）的第一个字符，变量 <code>p</code> 中的内容是 <code>'c'</code>。数组长度包括结尾的 <code>'\0'</code>，而字符串长度不包括。</p>
-<ol>
-<li>下面程序段的运行结果是（ B ）。</li>
-</ol>
-<p>A. LANGUAGEB. ANGUC. LANGUD. LANG</p>
+<p>23.  下面程序段的运行结果是（ B ）。</p>
+<p>A. LANGUAGE  B. ANGU  C. LANGU  D. LANG</p>
 <div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="w"> </span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;language&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
 <span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="o">++</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;u&#39;</span><span class="p">)</span>
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="err">–</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">);</span>
 </code></pre></div>
-<p>相同优先级的单目运算是从右到左结合的，所以这里<code>*p++</code>相当于<code>*(p++)</code>。p不会乖乖等一次循环走完再+1，而是在判断完循环条件是否成立之后直接就+1了，别错选D。</p>
-<ol>
-<li>下列程序的执行结果是( <code>4 6</code> )</li>
-</ol>
+<p>相同优先级的单目运算是从右到左结合的，所以这里 <code>*p++</code> 相当于 <code>*(p++)</code>。</p>
+<p>24. 下列程序的执行结果是( <code>4 6</code> )</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="n">b</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span><span class="w"> </span><span class="o">*</span><span class="n">pa</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">pb</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-
 <span class="w">    </span><span class="n">pa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
 <span class="w">    </span><span class="n">pb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">pa</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">pb</span><span class="o">++</span><span class="p">){</span><span class="w"> </span>
@@ -1905,38 +1853,31 @@ $y=
 <span class="p">}</span>
 </code></pre></div>
 <p>考试的时候做这种比较复杂的程序阅读题，建议在草稿纸上用表格实时记录各个变量的值的变化，把自己当成电脑按字面意思读程序。不要太相信自己作为人类的记忆力和理解力。😇</p>
-<ol>
-<li>下面程序段的运行结果是( <code>ef</code> )</li>
-</ol>
+<p>25.  下面程序段的运行结果是( <code>ef</code> )</p>
 <div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">str</span><span class="p">[]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abc</span><span class="se">\0</span><span class="s">def</span><span class="se">\0</span><span class="s">ghi&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">;</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="o">+</span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <p>注意 <code>'\n'</code>、<code>'\t'</code>、<code>'\0'</code> 这样的转义符算一个字符，而不是两个。<code>printf( )</code> 函数按 <code>%s</code> 格式输出时遇到 <code>'\0'</code> 就直接结束输出。</p>
-<ol>
-<li>下面程序段的运行结果是( bcdBCD )</li>
-</ol>
+<p>26.  下面程序段的运行结果是( <code>bcdBCD</code> )</p>
 <div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abcd&quot;</span><span class="w"> </span><span class="p">;</span>
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">sp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="p">;</span>
 <span class="n">puts</span><span class="p">(</span><span class="n">strcat</span><span class="p">(</span><span class="n">sp</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;ABCD&quot;</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="w"> </span><span class="p">;</span>
 </code></pre></div>
 <p>字符串常量的输出值也是首字符的地址，<code>"ABCD"+1</code> 返回的就是 <code>'B'</code> 的地址。<code>strcat( )</code> 函数把输入的两个地址指向的字符串 <code>"bcd"</code> 和 <code>"BCD"</code> 连接起来作为输出值。</p>
-<ol>
-<li>如下代码块能输出最后 <code>i</code> 的值。（❌）</li>
-</ol>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="p">{</span>
+<p>27.  如下代码块能输出最后 <code>i</code> 的值。（❌）</p>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">//随便什么循环体</span>
 <span class="p">}</span>
 <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 </code></pre></div>
-<p>这个<code>i</code>是定义在for循环里的，离开for循环之后就没了。</p>
+<p>这个 <code>i</code> 是定义在 for 循环里的，离开 for 循环之后就没了。</p>
 <h2 id="_3">三、上机考</h2>
 <h3 id="1-8-4">1. 习题8-4 报数</h3>
 <p>报数游戏是这样的：有 <code>n</code> 个人围成一圈，按顺序从 <code>1</code> 到 <code>n</code> 编好号。从第一个人开始报数，报到 <code>m</code>（小于 <code>n</code>）的人退出圈子；下一个人从 <code>1</code> 开始报数，报到 <code>m</code> 的人退出圈子。如此下去，直到留下最后一个人。本题要求编写函数，给出每个人的退出顺序编号。函数接口如下：</p>
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">CountOff</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">out</span><span class="p">[]</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
 <p>其中 <code>n</code> 是初始人数；<code>m</code> 是游戏规定的退出位次（保证为小于 <code>n</code> 的正整数）。函数 <code>CountOff</code> 将每个人的退出顺序编号存在数组 <code>out[]</code> 中。因为 C 语言数组下标是从 0 开始的，所以第 <code>i</code> 个位置上的人是第 <code>out[i-1]</code> 个退出的。</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<div class="highlight"><span class="filename">裁判测试程序样例</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 20</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">CountOff</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">out</span><span class="p">[]</span><span class="w"> </span><span class="p">);</span>
@@ -1959,18 +1900,16 @@ $y=
 </code></pre></div>
 <p>输入样例：11 3</p>
 <p>输出样例：4 10 1 7 5 2 11 9 3 6 8</p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">CountOff</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">out</span><span class="p">[]</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
+<div class="highlight"><span class="filename">我的解答</span><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">CountOff</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">out</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="cm">/*count记录每次数到了第几个人，all记录退出了几个人*/</span>
-
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*预先把数组元素清零*/</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*预先把数组元素清零*/</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*从下标为0的元素开始数*/</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/*循环到n个人都退出为止*/</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="o">!=</span><span class="n">m</span><span class="mi">-1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/*必须要!out[i]。如果out[i]不是0说明这个人已经退出了*/</span>
+<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">all</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*循环到n个人都退出为止*/</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="o">!=</span><span class="n">m</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*必须要!out[i]。如果out[i]不是0说明这个人已经退出了*/</span>
 <span class="w">            </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="o">==</span><span class="n">m</span><span class="mi">-1</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="cm">/*数到m个人了，让第m个人退出*/</span>
-<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">count</span><span class="o">==</span><span class="n">m</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*数到m个人了，让第m个人退出*/</span>
 <span class="w">            </span><span class="n">out</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="cm">/*在数组中注明这个人是第几个退出的人*/</span>
 <span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">            </span><span class="n">all</span><span class="o">++</span><span class="p">;</span>
@@ -1986,7 +1925,7 @@ $y=
 <div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="p">);</span>
 </code></pre></div>
 <p>函数 <code>strmcpy</code> 将输入字符串 <code>char *t</code> 中从第 <code>m</code> 个字符开始的全部字符复制到字符串 <code>char *s</code> 中。若 <code>m</code> 超过输入字符串的长度，则结果字符串应为空串。</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<div class="highlight"><span class="filename">裁判测试程序样例</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 20</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="p">);</span>
@@ -2012,72 +1951,71 @@ $y=
 <p><code>happy new year</code></p>
 <p>输出样例：</p>
 <p><code>new year</code></p>
-<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
+<div class="highlight"><span class="filename">错误解答</span><pre><span></span><code><span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">m</span><span class="o">--</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="cm">/*这样t中表示字符串结尾的&#39;\0&#39;就没复制到s里*/</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/*这样t中表示字符串结尾的&#39;\0&#39;就没复制到s里*/</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">];</span>
 <span class="w">        </span><span class="n">m</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;string.h&gt;</span><span class="c1"> /*可以在自己写的函数前面调用库文件简化代码*/</span>
-<span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
+<div class="highlight"><span class="filename">正确解答</span><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span><span class="c1"> /*可以在自己写的函数前面调用库文件简化代码*/</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">strmcpy</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">m</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">s</span><span class="p">));</span><span class="w"> </span><span class="cm">/*要初始化字符串s，因为主函数中没初始化*/</span>
 <span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"> </span><span class="cm">/*计算字符串t的长度*/</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">m</span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">=</span><span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="cm">/*注意i&lt;=n保证了t结尾的&#39;\0&#39;也被复制到s中。结尾没有&#39;\0&#39;的话主函数中以%s格式输出s会出错*/</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="3-2-6-n">3. 习题2-6 求阶乘序列前N项和</h3>
-<p>本题要求编写程序，计算序列 1!+2!+3!+⋯ 的前N项之和。输入格式:输入在一行中给出一个不超过12的正整数N。输出格式:在一行中输出整数结果。输入样例:<code>5</code>输出样例:<code>153</code></p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+<h3 id="3-2-6-n">3. 习题2-6 求阶乘序列前 N 项和</h3>
+<p>本题要求编写程序，计算序列 1!+2!+3!+⋯ 的前N项之和。</p>
+<p>输入格式:输入在一行中给出一个不超过 12 的正整数 <code>N</code>。</p>
+<p>输出格式:在一行中输出整数结果。</p>
+<p>输入样例: <code>5</code></p>
+<p>输出样例: <code>153</code></p>
+<div class="highlight"><span class="filename">错误解答</span><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 
-<span class="kt">double</span><span class="w"> </span><span class="nf">fact</span><span class="p">();</span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
-<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fact</span><span class="p">();</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w"> </span><span class="c1">//这一行写错了！</span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">double</span><span class="w"> </span><span class="nf">fact</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">double</span><span class="w"> </span><span class="nf">fact</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 <span class="w">    </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+
+<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">fact</span><span class="p">();</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这一行错了！</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>这在我自己电脑上编译运行的结果是正确的，但 PTA 上运行出来都是 WA。原因是 <code>printf</code> 写错了。<code>sum</code> 是 <code>double</code> 类型的变量，用 <code>int</code> 型格式输出double类型变量属于未定义行为。我自己电脑上的编译器会好心地帮我把 <code>double</code> 强制类型转换成 <code>int</code>，而 <code>PTA</code> 的编译器没那么聪明，需要学生自己写强制类型转换。改成 <code>printf("%d", (int)sum);</code> 就通过了。</p>
+<p>这在我自己电脑上编译运行的结果是正确的，但 PTA 上运行出来都是 WA。原因是 <code>printf</code> 错了。<code>sum</code> 是 <code>double</code> 类型的变量，用 <code>int</code> 型格式输出double类型变量属于未定义行为。我自己电脑上的编译器会好心地帮我把 <code>double</code> 强制类型转换成 <code>int</code>，而 <code>PTA</code> 的编译器没那么聪明，需要学生自己写强制类型转换。改成 <code>printf("%d", (int)sum);</code> 就通过了。</p>
 <h3 id="4-10-11">4. 习题10-11 有序表的增删改查操作</h3>
-<p>首先输入一个正整数_N_（1≤<em>N</em>≤1000）和一个无重复元素的、从小到大排列的、_N_个元素的有序表，然后在屏幕上显示以下菜单（编号和选项）:</p>
+<p>首先输入一个正整数 N （1 ≤ N ≤ 1000）和一个无重复元素的、从小到大排列的、N 个元素的有序表，然后在屏幕上显示以下菜单（编号和选项）:</p>
 <div class="highlight"><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
 [Other option] End
 </code></pre></div>
-<p>用户可以反复对该有序表进行插入、删除、修改和查找操作，也可以选择结束。当用户输入编号1～4和相关参数时，将分别对该有序表进行插入、删除、修改和查找操作，输入其他编号，则结束操作。本题要求实现4个函数，分别在有序表（数组）中插入、删除、修改、查找一个值。</p>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w">    </span>
+<p>用户可以反复对该有序表进行插入、删除、修改和查找操作，也可以选择结束。当用户输入编号 1～4 和相关参数时，将分别对该有序表进行插入、删除、修改和查找操作，输入其他编号，则结束操作。本题要求实现 4 个函数，分别在有序表（数组）中插入、删除、修改、查找一个值。</p>
+<div class="highlight"><span class="filename">函数接口定义</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w">    </span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">del</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span><span class="w"> </span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
 </code></pre></div>
 <p>函数 <code>insert</code> 在有序数组 <code>a</code> 中插入一个值为 <code>value</code> 的元素，如果在数组 <code>a</code> 中已有值为 <code>value</code> 的元素，则返回 <code>-1</code>。函数 <code>del</code> 删除有序数组 <code>a</code> 中等于 <code>value</code> 的元素，如果在数组 <code>a</code> 中没有找到值为 <code>value</code> 的元素，则返回 <code>-1</code>。函数<code>modify</code> 将有序数组 <code>a</code> 中等于 <code>value1</code> 的元素，替换为 <code>value2</code>，如果在数组 <code>a</code> 中没有找到值为 <code>value1</code> 的元素或者 <code>value2</code> 已在数组 <code>a</code> 中存在，则返回 <code>-1</code> 。函数 <code>query</code> 用二分法在有序数组 <code>a</code> 中查找元素 <code>value</code>，如果找到，则返回相应的下标；如果没有找到，则返回 <code>-1</code>。</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/* 有序表的增删改查操作 */</span>
+<div class="highlight"><span class="filename">裁判测试程序样例</span><pre><span></span><code><span class="cm">/* 有序表的增删改查操作 */</span>
 <span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 10000    </span><span class="cm">/* 定义符号常量表示数组a的长度 */</span>
 
@@ -2188,12 +2126,12 @@ $y=
 
 <span class="cm">/* 请在这里填写答案 */</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>6 -2 3 7 9 101 400
+<div class="highlight"><span class="filename">输入样例1 插入一个值</span><pre><span></span><code>6 -2 3 7 9 101 400
 1
 96
 0
 </code></pre></div>
-<p><div class="highlight"><pre><span></span><code>[1] Insert
+<div class="highlight"><span class="filename">输出样例1</span><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
@@ -2201,12 +2139,12 @@ $y=
 -2 3 7 9 96 101 400
 Thanks.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>6 -2 3 7 9 101 400
+<div class="highlight"><span class="filename">输入样例2 删除一个值</span><pre><span></span><code>6 -2 3 7 9 101 400
 2
 400
 0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[1] Insert
+<div class="highlight"><span class="filename">输出样例2</span><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
@@ -2214,13 +2152,13 @@ Thanks.
 -2 3 7 9 101
 Thanks.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>6 -2 3 7 9 101 400
+<div class="highlight"><span class="filename">输入样例3 修改一次</span><pre><span></span><code>6 -2 3 7 9 101 400
 3
 7
 10
 0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[1] Insert
+<div class="highlight"><span class="filename">输出样例3</span><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
@@ -2228,12 +2166,12 @@ Thanks.
 -2 3 9 10 101 400
 Thanks.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>6 -2 3 7 9 101 400
+<div class="highlight"><span class="filename">输入样例4 查询一次</span><pre><span></span><code>6 -2 3 7 9 101 400
 4
 -2
 0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[1] Insert
+<div class="highlight"><span class="filename">输出样例4</span><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
@@ -2241,7 +2179,7 @@ Thanks.
 0
 Thanks.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>6 -2 3 7 9 101 400
+<div class="highlight"><span class="filename">输入样例5 连续增删改查</span><pre><span></span><code>6 -2 3 7 9 101 400
 2
 101
 1
@@ -2253,7 +2191,7 @@ Thanks.
 444
 0
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>[1] Insert
+<div class="highlight"><span class="filename">输出样例5</span><pre><span></span><code>[1] Insert
 [2] Delete
 [3] Update
 [4] Query
@@ -2264,27 +2202,33 @@ Not found.
 -10 -2 3 7 9 444
 Thanks.
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<div class="highlight"><span class="filename">我的错误解答</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">//已经有Count了，没必要自己找数组有几个元素</span>
-<span class="w">    </span><span class="c1">//而且a[i]!=0这个判断标准也不对，有序表中完全有可能出现值为0的元素</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 已经有Count了，没必要自己找数组有几个元素</span>
+<span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
+<span class="w">    </span><span class="c1">// 而且a[i]!=0这个判断标准也不对，有序表中完全有可能出现值为0的元素</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="mi">-1</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
 <span class="w">    </span><span class="n">Count</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">del</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">del</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
@@ -2292,39 +2236,47 @@ Thanks.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value2</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">del</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="mi">-1</span><span class="o">||</span><span class="n">b</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w"> </span><span class="c1">//应该在del和insert之后各检查一次是否返回了-1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="mi">-1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 应该在del和insert之后各检查一次是否返回了-1</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">right</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">right</span><span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">right</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">right</span><span class="o">--</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="o">&gt;</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
-<span class="w">        </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">//二分查找改错改了好久。这种有很多细节要注意的常用代码最好还是背下来</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 二分查找改错改了好久，太不应该了……</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-这段代码有一个case是错的，PTA提示说是输入样例5的等价样例出错。奇怪的是，虽然运行出来是错的，但在PTA调试中运行结果样例5，输出却是对的。![KTAC<code>TPDCCL]F(O__)(6[(M.png](https://cdn.nlark.com/yuque/0/2022/png/25775350/1649210866339-4f689392-3fe7-4b45-990e-552b0bfb97b4.png#clientId=ub1b0debf-f6a3-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=180&amp;id=u2c76073f&amp;originHeight=302&amp;originWidth=420&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=42351&amp;status=error&amp;style=none&amp;taskId=ua9c674b1-f0bb-4382-acc5-f6739881a78&amp;title=&amp;width=250)这题里没用到野指针，也没有数组下标越界。后来发现是因为第4行用</code>a[i]!=0`判断是否结束循环，导致在测试样例的有序表中出现0时提前退出循环。而五个输入样例中都没出现0，所以我按照五个输入样例去试就发现不了错在哪。<img alt="“淆习”是河北话里的“学习”" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649333564715-bedfcee7-c485-490a-8d67-2e2f4d0f66fb.png#clientId=u22296693-de05-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=559&amp;id=uf814075f&amp;originHeight=956&amp;originWidth=766&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=true&amp;size=131179&amp;status=error&amp;style=none&amp;taskId=u6450dea5-b99d-40b8-b230-9081b087095&amp;title=%E2%80%9C%E6%B7%86%E4%B9%A0%E2%80%9D%E6%98%AF%E6%B2%B3%E5%8C%97%E8%AF%9D%E9%87%8C%E7%9A%84%E2%80%9C%E5%AD%A6%E4%B9%A0%E2%80%9D&amp;width=448" title="“淆习”是河北话里的“学习”" />
-<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<p>![KTAC<code>TPDCCL]F(O__)(6[(M.png](https://cdn.nlark.com/yuque/0/2022/png/25775350/1649210866339-4f689392-3fe7-4b45-990e-552b0bfb97b4.png#clientId=ub1b0debf-f6a3-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=180&amp;id=u2c76073f&amp;originHeight=302&amp;originWidth=420&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=42351&amp;status=error&amp;style=none&amp;taskId=ua9c674b1-f0bb-4382-acc5-f6739881a78&amp;title=&amp;width=250)这题里没用到野指针，也没有数组下标越界。后来发现是因为第4行用</code>a[i]!=0`判断是否结束循环，导致在测试样例的有序表中出现0时提前退出循环。而五个输入样例中都没出现0，所以我按照五个输入样例去试就发现不了错在哪。<img alt="“淆习”是河北话里的“学习”" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649333564715-bedfcee7-c485-490a-8d67-2e2f4d0f66fb.png#clientId=u22296693-de05-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=559&amp;id=uf814075f&amp;originHeight=956&amp;originWidth=766&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=true&amp;size=131179&amp;status=error&amp;style=none&amp;taskId=u6450dea5-b99d-40b8-b230-9081b087095&amp;title=%E2%80%9C%E6%B7%86%E4%B9%A0%E2%80%9D%E6%98%AF%E6%B2%B3%E5%8C%97%E8%AF%9D%E9%87%8C%E7%9A%84%E2%80%9C%E5%AD%A6%E4%B9%A0%E2%80%9D&amp;width=448" title="“淆习”是河北话里的“学习”" /></p>
+<p>其实这题课本上有得抄的！我感觉初学者能完整抄下来就能复习许多了。</p>
+<div class="highlight"><span class="filename">正确解答</span><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">Count</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">value</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">Count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Count</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="w"> </span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">j</span><span class="o">&gt;</span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="mi">-1</span><span class="p">];</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
@@ -2332,75 +2284,91 @@ Thanks.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">del</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">del</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">Count</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">Count</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">Count</span><span class="o">--</span><span class="p">;</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value2</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">modify</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">del</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value1</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">-1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">query</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Count</span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">left</span><span class="o">&lt;=</span><span class="n">right</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="o">&lt;</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="o">&gt;</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="mi">-1</span><span class="p">;</span>
-<span class="w">        </span><span class="k">else</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
-<span class="w">        </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">left</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mid</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">right</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mid</span><span class="mi">-1</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">mid</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="n">mid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">left</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">right</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="5-7-10">5. 习题7-10 水仙花数</h3>
-<p>水仙花数是指一个N位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=13+53+33。 本题要求编写程序，计算所有N位水仙花数。输入格式:输入在一行中给出一个正整数N（3≤N≤7）。输出格式:按递增顺序输出所有N位水仙花数，每个数字占一行。输入样例:<code>3</code>输出样例:<code>153``370``371``407</code>本题中 lry 同学遇到的困难是N=7的情况会运行超时。思路1：用原来的慢程序提前算好N=7时的水仙花数，写进新程序里，当用户输入N=7时不用计算，直接输出预先算好的值。（打表在工业界也是常规方法，大家别歧视这种“奇技淫巧”！🤪）思路2：程序慢的原因是对每个七位数都调用了七次pow( )函数计算其各位数字的七次方，而pow()函数是非常费时的，不如提前用一个10元数组储存0N、1N、……、9N，这样就不需要每次都重新计算各位数字的N次方了。
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+<p>水仙花数是指一个 N 位正整数（N≥3），它的每个位上的数字的N次幂之和等于它本身。例如：153=13+53+33。 本题要求编写程序，计算所有 N 位水仙花数。</p>
+<p>输入格式: 输入在一行中给出一个正整数 N（3≤N≤7）。</p>
+<p>输出格式:按递增顺序输出所有 N 位水仙花数，每个数字占一行。</p>
+<p>输入样例: <code>3</code></p>
+<p>输出样例: <code>153``370``371``407</code></p>
+<p>本题中寝室长 lry 同学遇到的困难是 N=7 的情况会运行超时。</p>
+<p>思路1：打表，用原来的慢程序提前算好 N=7 时的水仙花数，写进新程序里，当用户输入 N=7 时不用计算，直接写成 if(N==7) 时输出预先算好的值。</p>
+<p>思路2：程序慢的原因是对每个七位数都调用了七次 <code>pow( )</code> 函数计算其各位数字的七次方，而 <code>pow( )</code> 是非常费时的，不如提前用一个 10 元数组储存 $0^N$、$1^N$、……、$9^N$，这样就不需要每次都重新计算各位数字的 N 次方了。</p>
+<div class="highlight"><span class="filename">正确解答</span><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#include</span><span class="cpf">&lt;math.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">N</span><span class="p">);</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
 <span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">//用数组储存每个个位数的N次幂</span>
-<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pow</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="c1">// 用数组储存每个个位数的N次幂</span>
+<span class="w">    </span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="mi">-1</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="n">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">);</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span>
-<span class="w">        </span><span class="p">{</span>
+<span class="w">        </span><span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">            </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w">  </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">10</span><span class="p">];</span>
 <span class="w">            </span><span class="n">j</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
 <span class="w">        </span><span class="p">}</span>
-<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">==</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">sum</span><span class="o">==</span><span class="n">i</span><span class="p">)</span>
+<span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="c1">//不要给判断是否为水仙花数单独建个函数，因为每次调用函数也要花时间的</span>
+<span class="w">    </span><span class="c1">// 想省时间的话不要给判断是否为水仙花数单独建个函数，因为每次调用函数也要花时间的</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="6-2-12-">6. 习题2-12 输出华氏-摄氏温度转换表</h3>
-<p>输入2个正整数lower和upper（lower≤upper≤100），请输出一张取值范围为[lower，upper]、且每次增加2华氏度的华氏-摄氏温度转换表。温度转换的计算公式：C=5×(F−32)/9，其中C表示摄氏温度，F表示华氏温度。输入格式：在一行中输入2个整数，分别表示lower和upper的值，中间用空格分开。输出格式：第一行输出："fahr celsius"，接着每行输出一个华氏温度fahr（整型）与一个摄氏温度celsius（占据6个字符宽度，靠右对齐，保留1位小数）。若输入的范围不合法，则输出"Invalid."。输入样例1：<code>32 35</code>输出样例1：<code>fahr celsius``32   0.0``34   1.1</code>输入样例2：<code>40 30</code>输出样例2：<code>Invalid.</code>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<p>输入 2 个正整数 lower 和 upper（lower≤upper≤100），请输出一张取值范围为 [lower，upper]、且每次增加 2 华氏度的华氏-摄氏温度转换表。温度转换的计算公式：C=5×(F−32)/9，其中 C 表示摄氏温度，F 表示华氏温度。</p>
+<p>输入格式：在一行中输入2个整数，分别表示 lower 和 upper 的值，中间用空格分开。</p>
+<p>输出格式：第一行输出："fahr celsius"，接着每行输出一个华氏温度 fahr（整型）与一个摄氏温度 celsius（占据6个字符宽度，靠右对齐，保留1位小数）。若输入的范围不合法，则输出"Invalid."。</p>
+<p>输入样例1：<code>32 35</code></p>
+<p>输出样例1：<code>fahr celsius``32   0.0``34   1.1</code></p>
+<p>输入样例2：<code>40 30</code></p>
+<p>输出样例2：<code>Invalid.</code></p>
+<p><div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">low</span><span class="p">,</span><span class="w"> </span><span class="n">upp</span><span class="p">;</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">low</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">upp</span><span class="p">);</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">low</span><span class="o">&gt;</span><span class="n">upp</span><span class="o">||</span><span class="n">low</span><span class="o">&gt;</span><span class="mi">100</span><span class="w"> </span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">low</span><span class="o">&gt;</span><span class="n">upp</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">low</span><span class="o">&gt;</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Invalid.&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="k">else</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;fahr celsius</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="k">for</span><span class="p">(;</span><span class="w"> </span><span class="n">low</span><span class="o">&lt;=</span><span class="n">upp</span><span class="p">;</span><span class="w"> </span><span class="n">low</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <span class="w">            </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d%6.1f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">low</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="o">*</span><span class="p">(</span><span class="n">low</span><span class="mi">-32</span><span class="p">)</span><span class="o">/</span><span class="mi">9</span><span class="p">);</span>
@@ -2409,7 +2377,13 @@ Thanks.
 </code></pre></div>
 这题主要是输出格式容易错，“占据6个字符宽度，靠右对齐，保留1位小数”就是<code>%6.1f</code>。可以参考这篇笔记来复习：<a href="https://blog.csdn.net/whalefall/article/details/80297752?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164968288816780271993533%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&amp;request_id=164968288816780271993533&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-80297752.142^v7^pc_search_result_cache,157^v4^new_style&amp;utm_term=C%E8%AF%AD%E8%A8%80+%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F&amp;spm=1018.2226.3001.4187">C语言printf()输出格式大全</a></p>
 <h3 id="7-3-2">7. 习题3-2 高速公路超速处罚</h3>
-<p>按照规定，在高速公路上行使的机动车，达到或超出本车道限速的10%则处200元罚款；若达到或超出50%，就要吊销驾驶证。请编写程序根据车速和限速自动判别对该机动车的处理。输入格式:输入在一行中给出2个正整数，分别对应车速和限速，其间以空格分隔。输出格式:在一行中输出处理意见：若属于正常行驶，则输出“OK”；若应处罚款，则输出“Exceed x%. Ticket 200”；若应吊销驾驶证，则输出“Exceed x%. License Revoked”。其中x是超速的百分比，精确到整数。输入样例1:<code>65 60</code>输出样例1:<code>OK</code>输入样例2:<code>110 100</code>输出样例2:<code>Exceed 10%. Ticket 200</code>输入样例3:<code>200 120</code>输出样例3:<code>Exceed 67%. License Revoked</code>
+<p>按照规定，在高速公路上行使的机动车，达到或超出本车道限速的10%则处200元罚款；若达到或超出50%，就要吊销驾驶证。请编写程序根据车速和限速自动判别对该机动车的处理。输入格式:输入在一行中给出2个正整数，分别对应车速和限速，其间以空格分隔。输出格式:在一行中输出处理意见：若属于正常行驶，则输出“OK”；若应处罚款，则输出“Exceed x%. Ticket 200”；若应吊销驾驶证，则输出“Exceed x%. License Revoked”。其中x是超速的百分比，精确到整数。</p>
+<p>输入样例1: <code>65 60</code></p>
+<p>输出样例1: <code>OK</code></p>
+<p>输入样例2: <code>110 100</code></p>
+<p>输出样例2: <code>Exceed 10%. Ticket 200</code></p>
+<p>输入样例3: <code>200 120</code></p>
+<p>输出样例3:<code>Exceed 67%. License Revoked</code></p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
@@ -2421,7 +2395,7 @@ Thanks.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-这个解答的bug是：分段函数三段的临界值会出错，且输出的超速百分比有误差。这些都是计算机内浮点数运算自带的误差导致的。
+<p>这个解答的bug是：分段函数三段的临界值会出错，且输出的超速百分比有误差。这些都是计算机内浮点数运算自带的误差导致的。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
@@ -2433,9 +2407,9 @@ Thanks.
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-改成这样，输出的百分比的误差就可容忍了。题目要求精确到整数，不一定要强制类型转换成int，也可以用浮点数运算，然后输出零位小数，这样算得更准。但是临界值处依然是错的，输入<code>110 100</code>会输出<code>OK</code>。<img alt="SD62UA))I1B76VS6}NE_D$H.png" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649754387421-96949d1b-0407-4369-9801-4adf8cd5aeaa.png#clientId=u775d025a-5440-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=406&amp;id=u62ca7819&amp;originHeight=626&amp;originWidth=924&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=94104&amp;status=error&amp;style=none&amp;taskId=uf5abaacd-e484-4816-9009-82e76791712&amp;title=&amp;width=600" /><img alt="986V1JAZ(2KVM}{CV($}~OP.png" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649754419413-481d8627-4e3b-4c3a-8b66-d58206a7a89f.png#clientId=u775d025a-5440-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=284&amp;id=ud0dd9509&amp;originHeight=429&amp;originWidth=907&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=64931&amp;status=error&amp;style=none&amp;taskId=u9d617736-3c73-43e2-b679-24b6fbf097f&amp;title=&amp;width=600" /></p>
+<p>改成这样，输出的百分比的误差就可容忍了。题目要求精确到整数，不一定要强制类型转换成int，也可以用浮点数运算，然后输出零位小数，这样算得更准。但是临界值处依然是错的，输入<code>110 100</code>会输出<code>OK</code>。<img alt="SD62UA))I1B76VS6}NE_D$H.png" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649754387421-96949d1b-0407-4369-9801-4adf8cd5aeaa.png#clientId=u775d025a-5440-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=406&amp;id=u62ca7819&amp;originHeight=626&amp;originWidth=924&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=94104&amp;status=error&amp;style=none&amp;taskId=uf5abaacd-e484-4816-9009-82e76791712&amp;title=&amp;width=600" /><img alt="986V1JAZ(2KVM}{CV($}~OP.png" src="https://cdn.nlark.com/yuque/0/2022/png/25775350/1649754419413-481d8627-4e3b-4c3a-8b66-d58206a7a89f.png#clientId=u775d025a-5440-4&amp;errorMessage=unknown%20error&amp;from=paste&amp;height=284&amp;id=ud0dd9509&amp;originHeight=429&amp;originWidth=907&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=64931&amp;status=error&amp;style=none&amp;taskId=u9d617736-3c73-43e2-b679-24b6fbf097f&amp;title=&amp;width=600" /></p>
 <h3 id="8-11-1">8. 习题11-1 输出月份英文名</h3>
-<p>本题要求实现函数，可以返回一个给定月份的英文名称。函数接口定义：<code>char *getmonth( int n );</code>函数getmonth应返回存储了n对应的月份英文名称的字符串头指针。如果传入的参数n不是一个代表月份的数字，则返回空指针NULL。
+<p>本题要求实现函数，可以返回一个给定月份的英文名称。函数接口定义：<code>char *getmonth( int n );</code>函数getmonth应返回存储了n对应的月份英文名称的字符串头指针。如果传入的参数n不是一个代表月份的数字，则返回空指针NULL。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
 
 <span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">getmonth</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">);</span>
@@ -2455,9 +2429,11 @@ Thanks.
 
 <span class="cm">/* 你的代码将被嵌在这里 */</span>
 </code></pre></div>
-输入样例1：<code>5</code>输出样例1：<code>May</code>输入样例2：<code>15</code>输出样例2：<code>wrong input!</code>
-<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">getmonth</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span>
-<span class="p">{</span>
+<p>输入样例1：<code>5</code></p>
+<p>输出样例1：<code>May</code></p>
+<p>输入样例2：<code>15</code></p>
+<p>输出样例2：<code>wrong input!</code></p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="nf">getmonth</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">12</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="o">&amp;</span><span class="s">&quot;January&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;February&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;March&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;April&quot;</span><span class="p">,</span>
 <span class="w">        </span><span class="o">&amp;</span><span class="s">&quot;May&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;June&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;July&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="s">&quot;August&quot;</span><span class="p">,</span>
@@ -2469,26 +2445,28 @@ Thanks.
 <span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-两个错误：</p>
+<p>两个错误：</p>
 <ol>
-<li>不需要<code>&amp;</code>，字符串本身的返回值就是它首字符的地址。</li>
-<li>字符串是在getmonth函数里定义的，回到主函数之后这些字符串的内存空间被回收，主函数顺着getmonth函数返回的指针去找字符串，可能此时字符串还没被清理掉，也可能被清理掉了。所以运行的效果是有时候正常，有时候找不到字符串。</li>
+<li>不需要 <code>&amp;</code>，字符串本身的返回值就是它首字符的地址。</li>
+<li>字符串是在 getmonth 函数里定义的，回到主函数之后这些字符串的内存空间被回收，主函数顺着 getmonth 函数返回的指针去找字符串，可能此时字符串还没被清理掉，也可能被清理掉了。所以运行的效果是有时候正常，有时候找不到字符串。</li>
 </ol>
 <p>解决方法：</p>
 <ol>
-<li>多加了<code>&amp;</code>是C语言的未定义行为（Undefined Behavior），聪明的编译器会明白程序员的意图，自动忽略<code>&amp;</code>。所以虽然这样写是错的，但也能正常运行。</li>
-<li>在<code>char* a[12]</code>前面加<code>static</code>，或者干脆把这个字符指针数组定义为全局变量。</li>
+<li>多加了 <code>&amp;</code> 是 C 语言的未定义行为（Undefined Behavior），聪明的编译器会明白程序员的意图，自动忽略 <code>&amp;</code>。所以虽然这样写是错的，但也能正常运行。</li>
+<li>在 <code>char* a[12]</code> 前面加 <code>static</code>，或者干脆把这个字符指针数组定义为全局变量。</li>
 </ol>
 <h3 id="9-4-11">9. 习题4-11 兔子繁衍问题</h3>
-<p>一对兔子，从出生后第3个月起每个月都生一对兔子。小兔子长到第3个月后每个月又生一对兔子。假如兔子都不死，请问第1个月出生的一对兔子，至少需要繁衍到第几个月时兔子总数才可以达到N对？输入格式:输入在一行中给出一个不超过10000的正整数N。输出格式:在一行中输出兔子总数达到N最少需要的月数。输入样例:<code>30</code>输出样例:<code>9</code></p>
+<p>一对兔子，从出生后第 3 个月起每个月都生一对兔子。小兔子长到第 3 个月后每个月又生一对兔子。假如兔子都不死，请问第 1 个月出生的一对兔子，至少需要繁衍到第几个月时兔子总数才可以达到 N 对？</p>
+<p>输入格式: 输入在一行中给出一个不超过 10000 的正整数 N。</p>
+<p>输出格式: 在一行中输出兔子总数达到 N 最少需要的月数。</p>
+<p>输入样例: <code>30</code></p>
+<p>输出样例: <code>9</code></p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">f_0</span><span class="p">,</span><span class="w"> </span><span class="n">f_1</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">f_2</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">month</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">f_0</span><span class="p">,</span><span class="w"> </span><span class="n">f_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">f_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">f_2</span><span class="o">&lt;</span><span class="n">n</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">f_2</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">f_0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f_1</span><span class="p">;</span>
 <span class="w">        </span><span class="n">f_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f_2</span><span class="p">;</span>
 <span class="w">        </span><span class="n">f_2</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">f_0</span><span class="p">;</span>
@@ -2500,74 +2478,72 @@ Thanks.
 </code></pre></div>
 <p>其实这题的代码很好写，就是一般的斐波那契数列。但说实话我一开始没看出来这是斐波那契数列。第(n-1)个月已经出生了的兔子都能活到第n个月，而第(n-2)个月已经出生了的兔子到第n个月都能生小兔子，所以第n个月的兔子总数就是第(n-1)个月已出生的兔子数加上第(n-2)个月已出生的兔子数，是斐波那契数列。事实上，斐波那契数列也叫兔子数列，就是因为这个关于兔子的数学问题。</p>
 <h3 id="10-7-10">10. 练习7-10 查找指定字符</h3>
-<p>本题要求编写程序，从给定字符串中查找某指定的字符。输入格式：输入的第一行是一个待查找的字符。第二行是一个以回车结束的非空字符串（不超过80个字符）。输出格式：如果找到，在一行内按照格式“index = 下标”输出该字符在字符串中所对应的最大下标（下标从0开始）；否则输出"Not Found"。输入样例1：<code>m``programming</code>输出样例1：<code>index = 7</code>输入样例2：<code>a``1234</code>输出样例2：<code>Not Found</code>
+<p>本题要求编写程序，从给定字符串中查找某指定的字符。</p>
+<p>输入格式：输入的第一行是一个待查找的字符。第二行是一个以回车结束的非空字符串（不超过80个字符）。</p>
+<p>输出格式：如果找到，在一行内按照格式“index = 下标”输出该字符在字符串中所对应的最大下标（下标从0开始）；否则输出"Not Found"。</p>
+<p>输入样例1：<code>m``programming</code></p>
+<p>输出样例1：<code>index = 7</code></p>
+<p>输入样例2：<code>a``1234</code></p>
+<p>输出样例2：<code>Not Found</code></p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 80</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">)</span>
 <span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">index</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Not Found</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="k">else</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;index = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-有一个index = 79，字符串中有空格的case没通过，在<code>scanf("%s", s);</code>后面加入<code>puts(s);</code>发现输出的字符串只有输入字符串空格之前的部分，原因是scanf( )函数以%s格式读取字符串只读到空格、制表符为止，要把空格及空格以后的部分读入字符串只能用getchar( )。
+<p>有一个 index = 79，字符串中有空格的 case 没通过，在<code>scanf("%s", s);</code>后面加入<code>puts(s);</code>发现输出的字符串只有输入字符串空格之前的部分，原因是 <code>scanf( )</code> 函数以 <code>%s</code> 格式读取字符串只读到空格、制表符为止，要把空格及空格以后的部分读入字符串只能用 <code>getchar( )</code>。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 81</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(((</span><span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span><span class="o">!=</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="mi">-1</span><span class="p">))</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(((</span><span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span><span class="o">!=</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="mi">-1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;\0&#39;</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;\0&#39;</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">)</span>
 <span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">index</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="o">==</span><span class="mi">-1</span><span class="p">)</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Not Found</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="k">else</span>
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;index = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-这一次不管怎样输出都是<code>Not Found</code>，在第一个while循环后用puts( )输出字符串，发现输出为空；再在第一个while循环里用printf( )输出每次读入的ch，没有输出，说明没有进入第一个while循环。原因是输入的第一行除了一个字符，还有行末的一个回车，会在第一个while循环处被getchar( )读入储存给ch。ch=='\n'，不满足循环条件，就直接退出了。
+<p>这一次不管怎样输出都是 <code>Not Found</code>，在第一个 while 循环后用 <code>puts( )</code> 输出字符串，发现输出为空；再在第一个 while 循环里用 <code>printf( )</code> 输出每次读入的 <code>ch</code>，没有输出，说明没有进入第一个 while 循环。原因是输入的第一行除了一个字符，还有行末的一个回车，会在第一个 while 循环处被 <code>getchar( )</code> 读入储存给 <code>ch</code>。<code>ch=='\n'</code>，不满足循环条件，就直接退出了。</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
 <span class="cp">#define MAXN 81</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
 <span class="w">    </span><span class="n">getchar</span><span class="p">();</span><span class="w"> </span><span class="c1">//增加这一行代码，读走第一行结尾的\n即可</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(((</span><span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span><span class="o">!=</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="mi">-1</span><span class="p">))</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(((</span><span class="n">ch</span><span class="o">=</span><span class="n">getchar</span><span class="p">())</span><span class="o">!=</span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="o">&amp;&amp;</span><span class="p">(</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="mi">-1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ch</span><span class="p">;</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">    </span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
 <span class="w">    </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;\0&#39;</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="p">)</span>
-<span class="w">    </span><span class="p">{</span>
+<span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="sc">&#39;\0&#39;</span><span class="o">&amp;&amp;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">MAXN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">==</span><span class="n">c</span><span class="p">)</span>
 <span class="w">            </span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
 <span class="w">        </span><span class="n">i</span><span class="o">++</span><span class="p">;</span>
@@ -2578,14 +2554,17 @@ Thanks.
 <span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;index = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="11-9-1">11. 习题9-1 时间换算</h3>
-<p>本题要求编写程序，以hh:mm:ss的格式输出某给定时间再过n秒后的时间值（超过23:59:59就从0点开始计时）。输入格式：输入在第一行中以hh:mm:ss的格式给出起始时间，第二行给出整秒数n（&lt;60）。输出格式：输出在一行中给出hh:mm:ss格式的结果时间。输入样例：<code>11:59:40``30</code>输出样例：<code>12:00:10</code>
+<p>本题要求编写程序，以 hh:mm:ss 的格式输出某给定时间再过 n 秒后的时间值（超过 23:59:59 就从 0 点开始计时）。</p>
+<p>输入格式：输入在第一行中以 hh:mm:ss 的格式给出起始时间，第二行给出整秒数 n（&lt;60）。</p>
+<p>输出格式：输出在一行中给出 hh:mm:ss 格式的结果时间。</p>
+<p>输入样例：<code>11:59:40</code> <code>30</code></p>
+<p>输出样例：<code>12:00:10</code></p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<span class="p">{</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="n">ss</span><span class="p">,</span><span class="w"> </span><span class="n">plus</span><span class="p">;</span>
-<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ss</span><span class="p">);</span><span class="w"> </span><span class="c1">//这一行有问题，改成&quot;%d:%d:%d&quot;就对了</span>
+<span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ss</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这一行有问题，改成&quot;%d:%d:%d&quot;就对了</span>
 <span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">plus</span><span class="p">);</span>
 <span class="w">    </span><span class="n">ss</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">plus</span><span class="p">;</span>
 <span class="w">    </span><span class="n">mm</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
@@ -2593,11 +2572,11 @@ Thanks.
 <span class="w">    </span><span class="n">hh</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">mm</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
 <span class="w">    </span><span class="n">mm</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
 <span class="w">    </span><span class="n">hh</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="mi">24</span><span class="p">;</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02d:%02d:%02d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="n">ss</span><span class="p">);</span><span class="w"> </span><span class="c1">//输出两位整数，不足两位左边补0</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%02d:%02d:%02d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">hh</span><span class="p">,</span><span class="w"> </span><span class="n">mm</span><span class="p">,</span><span class="w"> </span><span class="n">ss</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出两位整数，不足两位左边补0</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
-在scanf( )后面输出了hh、mm、ss，发现只有hh是正常的，原因是读入格式%d%d%d不对。平时这样写可以正常读入三个整数，那是因为scanf( )把空格和制表符当作正常的分隔符，会自动跳过它们去读数字；而冒号是scanf( )不认识的分隔符，要让scanf( )知道应该跳过冒号去找下一个数字，就得在读入格式中把冒号写出来。想深入了解的话，可以去google一下scanf( )的实现方式。</p>
+<p>在 <code>scanf( )</code> 后面输出了hh、mm、ss，发现只有hh是正常的，原因是读入格式 <code>%d%d%d</code> 不对。平时这样写可以正常读入三个整数，那是因为 <code>scanf( )</code> 把空格和制表符当作正常的分隔符，会自动跳过它们去读数字；而冒号是 <code>scanf( )</code> 不认识的分隔符，要让 <code>scanf( )</code> 知道应该跳过冒号去找下一个数字，就得在读入格式中把冒号写出来。</p>
 
 
   
