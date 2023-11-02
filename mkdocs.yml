@@ -37,7 +37,7 @@ markdown_extensions:
 
 plugins:
   - blog:
-      post_url_format: "{file}"
+      post_url_format: "{slug}"
   # - optimize
 
 extra_javascript: # KaTeX
@@ -63,14 +63,15 @@ nav:
     - Music Processing Analysis:
       - eecs/mpa/index.md
       - 1 Representation: eecs/mpa/1_represent.md
-      - 2 Fourier Transform & 3 Audio Features: eecs/mpa/2_3_feature.md
       - 4 Music Synchronization: eecs/mpa/4_sync.md
+      - 5 Music Structure: eecs/mpa/5_struct.md
     - 'GCT634: Musical Applications of Machine Learning':
       - eecs/gct634/index.md
-      - W1 Representation: eecs/mpa/1_represent.md
       - W2-4 Music Classification:
         - eecs/gct634/w2-4_classify/index.md
-        - 'Ref: DeepMIR Lec3 Timbre': eecs/gct634/w2-4_classify/deepmir3.md
+        - 'Ref: DeepMIR Lec3. Timbre & Acoustic Features': eecs/gct634/w2-4_classify/deepmir3.md
+      - W5 Music Recommandation & Retrieval: eecs/gct634/w5_recommend.md
+      - W7-10 Automatic Music Transcription: eecs/gct634/w7-10_transcript/index.md
   - Linguistics:
     - ling/index.md
     - Middle Chinese Pronunciation:

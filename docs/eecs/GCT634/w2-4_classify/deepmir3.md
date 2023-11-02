@@ -46,8 +46,6 @@ Limits: Clear physical meaning but not sophisticated enough, limited semantic me
 
 ## 3. Representing Timbre: Deep Learning Perspective
 
-For fundamentals of deep learning and music classification, refer to [ISMIR 2021 Tutorial](https://music-classification.github.io/tutorial/landing-page.html).
-
 The blocks inside the black lines are trainable, and the 4 methods are called: (a) Feature engineering, (b) Low-level feature learning, (c) Convolution neural networks, (d) End-to-end learning
 
 <center>![Different Classifiers](pic/classifiers.png)</center>

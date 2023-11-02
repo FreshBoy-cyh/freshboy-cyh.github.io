@@ -1,12 +1,12 @@
 # GCT634: Musical Applications of Machine Learning
 
-DeepMIR 課程原來是仿照 GCT634 的。我還是想學原創且開源的課程，會儘快遷移的。
-
 This is a note of GCT634, a graduate level music tech course by KAIST. __Digital Signal Processing__ has been the primary computational method in the development of music technology, and __Machine Learning__ is a novel method.
 
 Instructor: Mr. Juhan Nam (남주한)
 
 Pre-requisite: Linear Algebra, Probability and Statistics, Basic machine learning, and Python
+
+The Week 1 lecture is on music representation. Please refer to [Section 1 of MPA](../mpa/1_represent.md).
 
 ## Assignments
 
