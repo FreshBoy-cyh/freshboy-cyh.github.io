@@ -1,6 +1,6 @@
-site_name: FreshBoy's Headspace
-site_author: FreshBoy
-site_description: FreshBoy's personal website, where you can find his notes, projects and blogs.
+site_name: Kaleo's Headspace
+site_author: Kaleo
+site_description: Kaleo's personal website, where you can find his notes, projects and blogs.
 
 theme: 
   name: material
@@ -18,9 +18,9 @@ theme:
 extra:
   social: # show GitHub, Twitter & Email at footage
     - icon: fontawesome/brands/github
-      link: https://github.com/FreshBoy-cyh
+      link: https://github.com/Kaleo996
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/FreshBoy_cyh
+      link: https://twitter.com/kaleo996
     - icon: fontawesome/solid/envelope
       link: mailto:yihangchen2003@gmail.com
   analytics:
@@ -34,6 +34,8 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
 
 plugins:
   - blog:
@@ -56,10 +58,7 @@ nav:
   - EECS:
     - eecs/index.md
     - ZJU C Correction: eecs/clang/index.md
-    - ZJU Discrete Math: https://github.com/FreshBoy-cyh/ZJU_Discrete_Mathematics_and_Its_Applications_Note
-    - ZJU Computer Architecture:
-      - eecs/arch/index.md
-      - C1 Introduction: eecs/arch/1_intro.md
+    - ZJU Discrete Math: https://github.com/Kaleo996/ZJU-Discrete-Math-2022
     - Music Processing Analysis:
       - eecs/mpa/index.md
       - 1 Representation: eecs/mpa/1_represent.md
@@ -83,6 +82,14 @@ nav:
       - ling/hawaii/index.md
       - 夏威夷文&发音: ling/hawaii/夏威夷文&发音.md
       - 夏威夷语语法: ling/hawaii/夏威夷语语法.md
+    - Syntax:
+      - ling/syntax/index.md
+      - 1 Introduction: ling/syntax/lec1.md
+      - 2 Constituents & Categories: ling/syntax/lec2.md
+      - 3 Phrase-Structure Rules: ling/syntax/lec3.md
+      - 4 X-bar Theory: ling/syntax/lec4.md
+      - 5 Movement: ling/syntax/lec5.md
+      - 6 Binding: ling/syntax/lec6.md
   - Blog:
     - blog/index.md
 

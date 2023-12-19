@@ -4,89 +4,78 @@ TBC: 这份笔记还非常欠整理！
 
 AMT Tasks:
 
-- Pitch Estimation (frame-level):
-  - Monophonic: From a single sound source.
-  - Polyphonic: From multiple sound sources.
-  - Melody Estimation: Single melodic pitch estimation from multiple sound sources.
+1. Pitch Estimation (frame-level):
+
+- Monophonic: From a single sound source.
+- Polyphonic: From multiple sound sources.
+- Melody Estimation: Single melodic pitch estimation from multiple sound sources.
 
 <center>![Various Pitch Estimation](pic/pitch_est.png)</center>
 
-- Note Transcription (note-level): Based on frame-level pitch estimation, identifies a note by detecting the onset and offset.
-- Sheet Music Generation: Based on note transcription, requires additional information like metric analysis, key detection, notes, and expressions.
+2. Note Transcription (note-level): Based on frame-level pitch estimation, identifies a note by detecting the onset and offset.
+3. Sheet Music Generation: Based on note transcription, requires additional information like metric analysis, key detection, notes, and expressions.
 
 ## 1. Monophonic Pitch Estimation
 
-When a tone is generated with a pitch, the waveform is periodic and the spectrum is harmonic. Pitch is often referred to as fundamental frequency or "F0" (F0 = 1 / period).
+> I read [this great note](https://zhuanlan.zhihu.com/p/454283094) in __simplified Chinese__ to fully understand this section.
 
-- Traditional Approaches:
-  - Time-Domain Approach: Estimate the period of the waveform.
-  - Frequency-Domain Approach: Exploit the harmonic pattern.
-- Methods:
-  - YIN: Based on normalized AMDF.
-  - CREPE: A state-of-the-art pitch estimation using CNN.
-- Post-Processing:
-  - Median filtering.
-  - Viterbi decoding.
+When a tone is generated with a pitch, the waveform is periodic and the spectrum is harmonic. __Pitch__ is often referred to as fundamental frequency or "f0" (f0 = 1 / period).
 
-Melody Extraction
+Traditional Approaches:
 
-- Definition: Extracting melodic pitch contours from polyphonic music.
-- Methods:
-  - Salience-Based Approach: Utilizing a saliency function.
-  - Source Separation Approach: Separating the melodic source and using monophonic pitch estimation.
-  - Classification-Based Approach: Utilizing CNN or CRNN.
+- Time-Domain: Estimate the period of the waveform. Calculate the distance between a segment in a fixed window and another segment in a sliding window, and find the time difference (lag) that makes the best match. e.g. [YIN algorithm](https://librosa.org/doc/main/generated/librosa.yin.html)
+- Frequency-Domain: Exploit the harmonic pattern
+- Cepstrum: Too complex to explain in English here. No need to understand this I think, just used the encapsulated functions.
 
-Recurrent Neural Networks (RNN) and Long Short-Term Memory (LSTM)
+ML Approaches: [CREPE](https://marl.github.io/crepe/) is the state-of-the-art pitch estimation using CNN on a frame of raw audio waveform.
 
-- RNN:
-  - Have connections between previous states and current states of hidden layers.
-  - Can have issues with exploding or vanishing gradients.
-- LSTM:
-  - Designed to avoid the long-term dependency problem.
-  - Contains four neural network layers in one module.
-  - Utilizes a cell state to allow information to flow through without change.
-  - Employs sigmoid gates to control the flow of information.
+Post-Processing: removing the outliers in the attained sequence of f0 at each time point
 
-Singing Melody Extraction
+- Median filtering
+- Viterbi decoding
 
-- Approach: Joint learning of singing voice detection and vocal pitch estimation.
-- Vocal Pitch Classification:
-  - Utilizes CRNN with ResNet stacks and Bi-directional LSTM-RNN.
-  - Employs Gaussian blurring in the output layer.
-- Singing Voice Detector:
-  - Uses shared features from the pitch classifier.
-  - Employs Bi-directional LSTM-RNN.
+__Melody Extraction__ is a more complex task of extracting melodic pitch contours from polyphonic music. Methods include:
+
+- Salience-Based Approach: Utilizing a saliency function (like HPS) to find the pre-dominant pitch.
+- Source Separation Approach: Separating the melodic source and using monophonic pitch estimation.
+- Classification-Based Approach: Utilizing CNN or CRNN, input a frame in the spectrogram, and let the model select the most possible f0 in a given range. The CRNN can be updated to LSTM or other recurrent networks.
+
+<center>![CRNN applied to spectrogram](pic/crnn.png)</center>
 
 ## 2. Multi-Pitch Estimation & Note Transcription
 
 Multiple Pitch Estimation: Polyphonic pitch estimation from multiple sound sources.
 
-AMT Model Challenges
+AMT Model Challenges:
 
-- Many sources are mixed and played simultaneously.
-  - They are likely to be harmonically related in music.
-  - Some sources can be masked by others.
-  - Content changes continuously by musical expressions (e.g. vibrato).
-- Labeling is time-consuming and requires high expertise.
-  - Supervised learning is limited (piano transcription is a special case).
-  - Sheet music can be used as “weak” labels with the score-to-audio alignment.
-  - Multi-track recording with monophonic pitch estimation.
+- Many sources are mixed and played simultaneously
+  - They are likely to be harmonically related in music
+  - Some sources can be masked by others
+  - Content changes continuously by musical expressions (e.g. vibrato)
+- Labeling is time-consuming and requires high expertise
+  - Supervised learning is limited (piano transcription is a special case)
+  - Sheet music can be used as "weak" labels with the score-to-audio alignment
+  - Multi-track recording with monophonic pitch estimation
 
 Methods
 
-- Iterative F0 search: DSP.
-- Joint source estimation: NMF.
-- Classification-based approach: ML/DL.
+- Iterative F0 search: DSP
+- Joint source estimation: NMF
+- Classification-based approach: ML/DL
 
-Iterative F0 Search
+__Iterative F0 Search__: Repeatedly finds predominant-F0 and removes its harmonic overtones.
 
-- Repeatedly finds predominant-F0 and removes its harmonic overtones.
-- Procedure:
-  1. Set the original to the residual.
-  2. Detect a predominant F0 based on pitch templates.
-  3. Spectral smoothing on harmonics on the detected F0.
-  4. Cancel the smoothed harmonics from the residual.
-  5. Repeat steps 2 & 3 until the residual is sufficiently flat.
+![Iterative f0 Search Pipeline](pic/iter_f0_ppl.png)
+
+![Alt text](pic/iter_f0_effect.png)
+
+Procedure:
+
+1. Set the original to the residual.
+2. Detect a predominant F0 based on pitch templates.
+3. Spectral smoothing on harmonics on the detected F0.
+4. Cancel the smoothed harmonics from the residual.
+5. Repeat steps 2 & 3 until the residual is sufficiently flat.
 
 NMF-based Spectrogram Decomposition
 

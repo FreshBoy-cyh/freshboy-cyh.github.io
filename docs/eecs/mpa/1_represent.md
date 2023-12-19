@@ -35,12 +35,14 @@ Audio Representations in Spectrogram:
 * Pitch Class Profile / Chromagram: a 12-element feature vector indicating how much energy of each pitch class, {C, C#, D, D#, E, ..., B}, is present in the signal, ignoring the octaves
 * Mel-Spectrogram: the mel scale is a perceptual scale of pitches judged by listeners to be equal in distance from one another, with finer resolution in the low-frequency range (NOT exactly logarithmic scale)
 
+<center>![different spectrograms of a musical scale](pic/features.jpg)</center>
+
 Different spectrograms are used as input to CNN to deal with different tasks of music feature extraction.
 
 * Timbre representation: Spectrogram → Mel-Spectrogram → MFCC
 * Pitch representation: Spectrogram → CQT → Chroma Feature
 
-<center>![spectrograms](pic/spectrograms.webp)</center>
+<center>![how to get the spectrograms](pic/spectrograms.webp)</center>
 
 Dataset:
 
@@ -60,7 +62,7 @@ Nyquist–Shannon Sampling Theorem: A signal must be sampled at least twice as f
 
 __Quantization__: Round the amplitude to the nearest discrete steps.
 
-Bit depth is the number of bits used to represent the amplitude at one sampling point. It determines dynamic range of digital signals. $Dynamic range = 20\log_{10}\frac{\max}{\min}$
+Bit depth is the number of bits used to represent the amplitude at one sampling point. It determines dynamic range of digital signals. Dynamic range = $20\log_{10}\frac{\max}{\min}$
 
 <center>
 
