@@ -1,0 +1,2239 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Kaleo's personal website, where you can find his notes, projects and blogs.">
+      
+      
+        <meta name="author" content="Kaleo">
+      
+      
+      
+        <link rel="prev" href="../clang/">
+      
+      
+        <link rel="next" href="../mpa/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0-b3">
+    
+    
+      
+        <title>ZJU Software Engineering - Kaleo's Headspace</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.83068744.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-5D9MVMM08N"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-5D9MVMM08N",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-5D9MVMM08N",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#zju" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Kaleo&#39;s Headspace" class="md-header__button md-logo" aria-label="Kaleo's Headspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kaleo's Headspace
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ZJU Software Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  EECS
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ling/" class="md-tabs__link">
+          
+  
+    
+  
+  Linguistics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Kaleo&#39;s Headspace" class="md-nav__button md-logo" aria-label="Kaleo's Headspace" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Kaleo's Headspace
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../.." class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_1">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/about_me/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Me
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../home/friends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Friends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    EECS
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            EECS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clang/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZJU C Programming
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/Kaleo996/ZJU-Discrete-Math-2022" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ZJU Discrete Math
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ZJU Software Engineering
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ZJU Software Engineering
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1~5 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610" class="md-nav__link">
+    6~10 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115" class="md-nav__link">
+    11~15 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1620" class="md-nav__link">
+    16~20 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2125" class="md-nav__link">
+    21~25 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2630" class="md-nav__link">
+    26~30 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3136" class="md-nav__link">
+    31~36 章
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../mpa/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Music Processing Analysis
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2_5">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            Music Processing Analysis
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpa/1_represent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1 Representation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpa/4_sync/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4 Music Synchronization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mpa/5_struct/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5 Music Structure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../gct634/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    GCT634: Musical Applications of Machine Learning
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2_6">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            GCT634: Musical Applications of Machine Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../gct634/w2-4_classify/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    W2-4 Music Classification
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_2_6_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            W2-4 Music Classification
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gct634/w2-4_classify/deepmir3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ref: DeepMIR Lec3. Timbre & Acoustic Features
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gct634/w5_recommend/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W5 Music Recommandation & Retrieval
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gct634/w7-10_transcript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    W7-10 Music Transcription
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ling/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Linguistics
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Linguistics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ling/mid_ch/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Middle Chinese Pronunciation
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_3_2">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Middle Chinese Pronunciation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/mid_ch/onset/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Onset
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/mid_ch/tone_coda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tone & Coda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/mid_ch/rime/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rime
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ling/hawaii/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Hawaiian Language
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_3_3">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Hawaiian Language
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E6%96%87%26%E5%8F%91%E9%9F%B3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    夏威夷文 & 发音
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/hawaii/%E5%A4%8F%E5%A8%81%E5%A4%B7%E8%AF%AD%E8%AF%AD%E6%B3%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    夏威夷语语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../ling/syntax/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    ZJU Syntax
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_3_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            ZJU Syntax
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/syntax/constituent/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Constituents & Categories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/syntax/x_bar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PS Rules & X' Theory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/syntax/move/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Movement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/syntax/bind/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Binding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ling/syntax/ug/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Universal Grammar
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              <label class="md-nav__link " for="__nav_4">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Archive
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Archive
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/archive/2023/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    1~5 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610" class="md-nav__link">
+    6~10 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1115" class="md-nav__link">
+    11~15 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1620" class="md-nav__link">
+    16~20 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2125" class="md-nav__link">
+    21~25 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2630" class="md-nav__link">
+    26~30 章
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3136" class="md-nav__link">
+    31~36 章
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="zju">ZJU 软件工程题库精简版</h1>
+<p>很多思政题可以凭党性做对，而有些则需要学习具体的知识。这里只含需要学习的题目。题目序号 x.y 表示这是第 x 章的第 y 题。只列一个选项为正确选项，多个选项中一个粗体的是正确选项。</p>
+<p>如果题目有选项说 both x and y、多选 x y z 或 All of the above 那一定是对的，除了出现在这里的几题。</p>
+<h2 id="15">1~5 章</h2>
+<p>1.2 Software is a product and can be manufactured using the same technologies used for other engineering artifacts</p>
+<p>False</p>
+<p>1.3 Software deteriorates rather than wears out because</p>
+<p>C. Multiple change requests introduce errors in component interactions (意思是客户不断提要求导致代码越改越屎山)</p>
+<p>1.5 There are no real differences between creating WebApps and MobileApps.</p>
+<p>False</p>
+<p>2.1 Which of the items listed below is not one of the software engineering layers?</p>
+<p>A. Process</p>
+<p><strong>B. Manufacturing</strong></p>
+<p>C. Methods</p>
+<p>D. Tools</p>
+<p>2.3 Which of these are the 5 generic software engineering framework activities?</p>
+<p>A. communication, planning, modeling, construction, deployment</p>
+<p>2.8 In general software only succeeds if its behavior is consistent with the objectives of its designers.</p>
+<p>False，designer 说了不算，甲方爸爸（stakeholder）说行才是行</p>
+<p>3.2 The communication activity is best handled for small projects using six distinct actions (inception, elicitation, elaboration, negotiation, specification, validation).</p>
+<p>False</p>
+<p>3.5 Which of these are standards for assessing software processes?</p>
+<p>B. SPICE</p>
+<p>D. ISO 9001</p>
+<p><strong>E. both b and d</strong></p>
+<p>4.5 The spiral model of software development</p>
+<p>C. Includes project risks evaluation during each iteration.</p>
+<p>4.9 Which of these is not one of the phase names defined by the Unified Process model for software development?</p>
+<p>A. Inception phase</p>
+<p>B. Elaboration phase</p>
+<p>C. Construction phase</p>
+<p><strong>D. Validation phase</strong></p>
+<p>5.4 In agile software processes the highest priorities is to satisfy the customer through early and continuous delivery of valuable software.</p>
+<p>True</p>
+<p>5.6 What are the four framework activities found in the Extreme Programming (XP) process model?</p>
+<p>D. planning, design, coding, testing</p>
+<p>5.8 Which is not one of the key questions that is answered by each team member at each daily Scrum meeting?</p>
+<p>A. What did you do since the last meeting?</p>
+<p>B. What obstacles are you encountering?</p>
+<p><strong>C. What obstacles are you encountering?</strong> (是的，选项重复)</p>
+<p>D. What do you plan to accomplish be the next team meeting?</p>
+<p>5.9 The Dynamic Systems Development Method (DSDM) suggests a philosophy that is based on the Pareto principle (80% of the application can be delivered in 20% of the time required to build the complete application).</p>
+<p>True</p>
+<p>5.11 Agile Unified Process uses the classic UP phased activities (inception, elaboration, construction, transition) to help the team visualize the overall process flow.</p>
+<p>True</p>
+<h2 id="610">6~10 章</h2>
+<p>6.4 Teams with diversity in the individual team member skill sets tend to be more effective than teams without this diversity.</p>
+<p>True</p>
+<p>6.8 In XP a metaphor is used as a device to facilitate communications among customers, team members, and managers?</p>
+<p>True (用隐喻让不懂技术的人理解个大概)</p>
+<p>6.11 In collaborative development environments, metrics are used to reward and punish team members.</p>
+<p>False</p>
+<p>7.1 Software engineering principles have about a three year half-life.</p>
+<p>False</p>
+<p>7.2 Which of the following is not one of core principles of software engineering practice?</p>
+<p>A. All design should be as simple as possible, but no simpler.</p>
+<p>B. A software system exists only to provide value to its users.</p>
+<p><strong>C. Pareto principle (20% of any product requires 80% of the effort).</strong></p>
+<p>D. Remember that you produce others will consume</p>
+<p>7.4 The agile view of iterative customer communication and collaboration is applicable to all software engineering practice.</p>
+<p>True</p>
+<p>7.7 Requirements models depict software in which three domains?</p>
+<p>C. information, function, behavior</p>
+<p>7.11 A successful test I ones that discovers at least one as-yet undiscovered error.</p>
+<p>True</p>
+<p>8.1 Requirements engineering is a generic process that does not vary from one software project to another.</p>
+<p>True</p>
+<p>8.4 A stakeholder is anyone who will purchase the completed software system under development.</p>
+<p>False</p>
+<p>8.8 In collaborative requirements gathering the facilitator</p>
+<p>C. controls the meeting</p>
+<p>8.9 Which of the following is not one of the requirement classifications used in Quality Function Deployment (QFD)?</p>
+<p>C. mandatory</p>
+<p>8.15 Analysis patterns facilitate the transformation of the analysis model into a design model by suggesting reliable solutions to common problems.</p>
+<p>True</p>
+<p>8.16 In agile process models requirements engineering and design activities are interleaved.</p>
+<p>True</p>
+<p>8.18 In requirements validation the requirements model is reviewed to ensure its technical feasibility.</p>
+<p>False</p>
+<p>8.19 The most common reason for software project failure is lack of functionality.</p>
+<p>False</p>
+<p>9.1 Which of these is not an element of a requirements model?</p>
+<p>C. Data elements</p>
+<p>9.2 Which of the following is not an objective for building a requirements model?</p>
+<p>C. develop an abbreviated solution for the problem</p>
+<p>9.4 In structured analysis models focus on the structure of the classes defined for a system along with their interactions.</p>
+<p>False</p>
+<p>9.6 It is important to consider alternative actor interactions when creating a preliminary use case.</p>
+<p>False</p>
+<p>9.9 UML activity diagrams are useful in representing which analysis model elements?</p>
+<p>D. Scenario-based elements</p>
+<p>9.10 UML swimnlane diagrams allow you to represent the flow of activities by showing the actors having responsibility for creating each data element.</p>
+<p>False</p>
+<p>10.3 Attributes are chosen for an object by examining the problem statement and identifying the entities that appear to be related.</p>
+<p>False</p>
+<p>10.4 Which of the following is not one of the broad categories used to classify operations?</p>
+<p>A. computation</p>
+<p>B. data manipulation</p>
+<p>C. event monitors</p>
+<p><strong>D. transformers</strong></p>
+<p>10.8 A stereotype (注意不是prototype) is the basis for class reuse in UML modeling.</p>
+<p>False</p>
+<h2 id="1115">11~15 章</h2>
+<p>11.2 For purposes of behavior modeling an event occurs whenever</p>
+<p>B. the system an actor exchange information.</p>
+<p>11.3 For purposes of behavior modeling a state is any</p>
+<p>C. observable mode of behavior.</p>
+<p>11.4 The state transition diagram</p>
+<p>D. indicates system reactions to external events</p>
+<p>11.5 The UML sequence diagram shows the order in which system events are processed.</p>
+<p>False</p>
+<p>11.8 Which is not one of the analysis activities that is used to create a complete analysis model?</p>
+<p>A. Configuration analysis</p>
+<p>B. Content analysis</p>
+<p>C. Functional analysis</p>
+<p><strong>D. Market analysis</strong></p>
+<p>11.10 What are the elements of a WebApp interaction model?</p>
+<p>C. use-cases, sequence diagrams, state diagrams, interface prototype</p>
+<p>11.11 UML activity diagrams can be used to represent the user observable functionality delivered by the WebApp as well as the operations contained in each analysis class.</p>
+<p>True</p>
+<p>12.4 Which of the following is not a characteristic common to all design methods?</p>
+<p><strong>A. configuration management</strong></p>
+<p>B. functional component representation</p>
+<p>C. quality assessment guidelines</p>
+<p>D. refinement heuristics</p>
+<p>12.8 Since modularity is an important design goal it is not possible to have too many modules in a proposed design.</p>
+<p>False</p>
+<p>12.10 Cohesion (内聚) is a qualitative indication of the degree to which a module</p>
+<p>B. focuses on just one thing.</p>
+<p>12.11 Coupling (耦合) is a qualitative indication of the degree to which a module</p>
+<p>D. is connected to other modules and the outside world.</p>
+<p>12.14 Which of the following is not one of the five design class types</p>
+<p>A. Business domain classes</p>
+<p><strong>B. Entity classes</strong></p>
+<p>C. Process classes</p>
+<p>D. User interface classes</p>
+<p>12.15 Which design model elements are used to depict a model of information represented from the user's view?</p>
+<p>C. Data design elements</p>
+<p>12.19 The deployment design elements specify the build order for the software components.</p>
+<p>False</p>
+<p>13.1 The best representation of system architecture is an operational software prototype.</p>
+<p>False</p>
+<p>13.3 An architectural description is often documented using an architecture template.</p>
+<p>False</p>
+<p>13.4 An architectural decision is often documented using an architecture decision description template.</p>
+<p>True</p>
+<p>13.14 Which of the following is not an example of infrastructure components that may need to be integrated into the software architecture?</p>
+<p>C. Interface components</p>
+<p>13.18 Pattern-based architectural reviews can be useful for project with short build cycles and volatile requirements.</p>
+<p>True</p>
+<p>13.19 Static architectural conformance checking assesses whether or not the source code matches the user visible requirements.</p>
+<p>False</p>
+<p>14.2 In the context of object-oriented software engineering a component contains</p>
+<p>D. set of collaborating classes</p>
+<p>14.5 Which of the following is not one of the four principles used to guide component-level design?</p>
+<p>A. Dependency Inversion Principle</p>
+<p>B. Interface Segregation Principle</p>
+<p>C. Open-Closed Principle</p>
+<p><strong>D. Parsimonious Complexity Principle</strong></p>
+<p>14.6 The use of stereotypes can help identify the nature of components at the detailed design level.</p>
+<p>True</p>
+<p>14.8 Software coupling is a sign of poor architectural design and can always be avoided in every system.</p>
+<p>False</p>
+<p>14.11 WebApp content design at the component level focuses on content objects and the manner in which they interact.</p>
+<p>False</p>
+<p>14.13 Component-level design for mobile apps is not any different from component-based design for Web apps.</p>
+<p>True</p>
+<p>14.16 Which of the following is not one of the major activities of domain engineering?</p>
+<p>A. analysis</p>
+<p>B. construction</p>
+<p>C. dissemination</p>
+<p><strong>D. validation</strong></p>
+<p>14.17 Which of the following factors would not be considered during component qualification?</p>
+<p>A. application programming interface (API)</p>
+<p>B. development and integration tools required</p>
+<p>C. exception handling</p>
+<p><strong>D. testing equipment required</strong></p>
+<p>14.18 Which is the following is a technique used for component wrapping?</p>
+<p>B. clear-box wrapping</p>
+<p>14.19 Which of the following is not one of the issues that form a basis for design for reuse?</p>
+<p><strong>A. object-oriented programming</strong></p>
+<p>B. program templates</p>
+<p>C. standard data</p>
+<p>D. standard interface protocols</p>
+<p>15.1 hich of the following interface design principles does not allow the user to remain in control of the interaction with a computer?</p>
+<p>D. only provide one rigidly defined method for accomplishing a task</p>
+<p>15.6 Which model depicts the profile of the end users of a computer system?</p>
+<p>C. user model</p>
+<p>15.8 Which model depicts the look and feel of the user interface along with all supporting information?</p>
+<p>A. implementation model</p>
+<p>15.12 The computer's display capabilities are the primary determinant of the order in which user interface design activities are completed.</p>
+<p>False</p>
+<h2 id="1620">16~20 章</h2>
+<p>16.1 Which of the following is not one of the elements of a design pattern?</p>
+<p>A. context</p>
+<p><strong>B. environment</strong></p>
+<p>C. problem</p>
+<p>D. solution</p>
+<p>16.2 RubberNecking is an example of a classic generative pattern.</p>
+<p>False</p>
+<p>16.7 It is important to reduce the coupling among design patterns so that they can be treated as independent entities.</p>
+<p>False</p>
+<p>16.12 Unlike architectural patterns, component-level design patterns may be applied to solve subproblems without regard to system context.</p>
+<p>False</p>
+<p>16.13 Most user interface design patterns fall with in one of ____ categories of patterns.</p>
+<p>B. 10</p>
+<p>16.17 Mobile app user interface patterns can be represented as a collection of best of breed screen images.</p>
+<p>True</p>
+<p>17.6 Screen layout design has several widely accepted standards based on human factors research.</p>
+<p>False</p>
+<p>17.10 Content objects are not normally chunked into Web pages until the implementation activities begin.</p>
+<p>False</p>
+<p>17.11 Content architecture and WebApp architecture are pretty much the same thing for many WebApps?</p>
+<p>False</p>
+<p>17.13 MVC is a three layer architecture that contains a</p>
+<p>C. model, view, and controller</p>
+<p>17.15 To allow the user to feel in control of a WebApp, it is a good idea to mix both horizontal and vertical navigation mechanisms on the same page.</p>
+<p>False</p>
+<p>17.17 Which of these is not one of the design activities associated with object-oriented hypermedia design?</p>
+<p>C. content design</p>
+<p>18.1 MobileApps must be designed take intermittent connectivity outages.</p>
+<p>True</p>
+<p>18.2 Modern electronics allow developers to ignore the power demands made by a MobileApp.</p>
+<p>False</p>
+<p>18.5 Quality function deployment is not necessary when implementing MobileApp user stories?</p>
+<p>False</p>
+<p>18.11 The most important MobileApp architecture decision whether to build a thin or fat mobile client.</p>
+<p>True</p>
+<p>19.7 Software metrics represent direct measures of some manifestation of quality.</p>
+<p>False，应该是indirect的</p>
+<p>19.8 The quality dilemma might be summarized as choosing between building things quickly or building things correctly.</p>
+<p>False</p>
+<p>19.9 Good enough software delivers high quality software functions along with specialized functions that contain known bugs.</p>
+<p>True</p>
+<p>19.10 Which of the following is likely to be the most expensive cost of quality?</p>
+<p>B. External failure costs</p>
+<p>20.3 Defect amplification models can be used to illustrate the costs associated with using software from its initial deployment to its retirement.</p>
+<p>False</p>
+<p>20.4 Review metrics can be used to assess the efficacy of each review activity.</p>
+<p>True</p>
+<h2 id="2125">21~25 章</h2>
+<p>21.3 The elements of software quality assurance consist of reviews, audits, and testing.</p>
+<p>False</p>
+<p>21.4 Which of these activities is not one of the activities recommended to be performed by an independent SQA group?</p>
+<p>A. prepare SQA plan for the project</p>
+<p>B. review software engineering activities to verify process compliance</p>
+<p>C. report any evidence of noncompliance to senior management</p>
+<p><strong>D. serve as the sole test team for any software produced</strong></p>
+<p>21.6 Attempts to apply mathematical proof to demonstrate that a program conforms to its specifications are doomed to failure.</p>
+<p>False</p>
+<p>21.7 Statistical quality assurance involves</p>
+<p>C. tracing each defect to its underlying cause, isolating the "vital few" causes, and moving to correct them</p>
+<p>21.8 Six Sigma methodology defines three core steps.</p>
+<p>C. define, measure, analyze</p>
+<p>21.10 Software safety is a quality assurance activity that focuses on hazards that</p>
+<p>B. may cause an entire system to fail</p>
+<p>22.1 In software quality assurance work there is no difference between software verification and software validation.</p>
+<p>False</p>
+<p>22.9 Bottom-up integration testing has as it's major advantage(s) that</p>
+<p>C. no stubs need to be written</p>
+<p>22.11 Smoke testing might best be described as</p>
+<p>B. rolling integration testing</p>
+<p>22.12 When testing object-oriented software it is important to test each class operation separately as part of the unit testing process.</p>
+<p>False</p>
+<p>22.13 The OO testing integration strategy involves testing</p>
+<p>A. groups of classes that collaborate or communicate in some way</p>
+<p>22.17 Software validation is achieved through a series of tests performed by the user once the software is deployed in his or her work environment.</p>
+<p>False</p>
+<p>22.20 Recovery testing is a system test that forces the software to fail in a variety of ways and verifies that software is able to continue execution without interruption.</p>
+<p>False</p>
+<p>22.22 Stress testing examines the pressures placed on the user during system use in extreme environments.</p>
+<p>False</p>
+<p>23.3 The testing technique that requires devising test cases to demonstrate that each program function is operational is called</p>
+<p>A. black-box testing</p>
+<p>23.7 The cyclomatic complexity metric provides the designer with information regarding the number of</p>
+<p>C. independent logic paths in the program</p>
+<p>23.13 Graph-based testing methods can only be used for object-oriented systems</p>
+<p>False</p>
+<p>23.16 Orthogonal array testing enables the test designer to maximize the coverage of the test cases devised for relatively small input domains.</p>
+<p>True</p>
+<p>23.17 Test derived from behavioral class models should be based on the</p>
+<p>C. state transition diagram</p>
+<p>24.1 It is not possible to test object-oriented software without including error discovery techniques applied to the system OOA and OOD models</p>
+<p>True</p>
+<p>24.2 The correctness of the OOA and OOD model is accomplished using formal technical reviews by the software quality assurance team.</p>
+<p>False</p>
+<p>24.7 Encapsulation of attributes and operations inside objects makes it easy to obtain object state information during testing.</p>
+<p>False</p>
+<p>24.9 Fault-based testing is best reserved for</p>
+<p>B. operations and classes that are critical or suspect</p>
+<p>24.10 Scenario-based testing</p>
+<p><strong>A. concentrates on actor and software interaction</strong></p>
+<p>B. misses errors in specifications</p>
+<p>C. misses errors in subsystem interactions</p>
+<p>D. both a and b</p>
+<p>24.11 Random order tests are conducted to exercise different class instance life histories.</p>
+<p>True</p>
+<p>24.12 Which of these techniques is not useful for partition testing at the class level</p>
+<p>A. attribute-based partitioning</p>
+<p>B. category-based partitioning</p>
+<p><strong>C. equivalence class partitioning</strong></p>
+<p>D. state-based partitioning</p>
+<p>25.1 Which of the following is not one of the dimensions of quality used to assess a WebApp?</p>
+<p>A. Content</p>
+<p><strong>B. Maintainability</strong></p>
+<p>C. Navigability</p>
+<p>D. Usability</p>
+<p>25.2 WebApps require special testing methodologies because WebApp errors have several unique characteristics.</p>
+<p>True</p>
+<p>25.3 Since WebnApps evolve continuously, the testing process is an on-going activity, conducted by the Web support staff using regression tests.</p>
+<p>True</p>
+<p>25.6 Which of the following is not one of the objectives of WebApp content testing?</p>
+<p>B. Identify linking errors</p>
+<p>25.9 Which of the following is not a WebApp interface mechanism?</p>
+<p>A. Browser</p>
+<p>B. Cookies</p>
+<p><strong>C. Forms</strong></p>
+<p>D. Links</p>
+<p>25.11 Usability tests should be designed and executed by intended users for a given WebApp.</p>
+<p>False</p>
+<p>25.12 WebApp compatibility testing is conducted to be sure that the user model for usage scenario matched the user category assigned to a given user.</p>
+<p>False</p>
+<p>25.14 The purpose of WebApp navigation syntactic testing is to ensure the correct appearance of each navigation mechanism.</p>
+<p>False</p>
+<p>25.18 Which of the following is not a testable WebApp security element?</p>
+<p>A. Authentication</p>
+<p>B. Encryption</p>
+<p>C. Firewalls</p>
+<p><strong>D. Penetration</strong></p>
+<p>25.20 Load testing involves determining the input of which 3 variables?</p>
+<p>A. N, T, D</p>
+<p>25.21 WebApp stress testing is a continuation load testing.</p>
+<p>True</p>
+<h2 id="2630">26~30 章</h2>
+<p>26.1 MobileApps require special testing methodologies because of concerns associated using them in diverse network environments.</p>
+<p>True</p>
+<p>26.5 A weighted device platform matrix helps to prioritize test cases.</p>
+<p>False</p>
+<p>27.2 It is possible to have a safe system that is not secure.</p>
+<p>False</p>
+<p>27.5 Cloud computing is has greater levels of security that other web data repositories.</p>
+<p>False</p>
+<p>27.11 Which is not one of the elements of a security case?</p>
+<p>A. Arguments</p>
+<p><strong>B. Bug reports</strong></p>
+<p>C. Claims</p>
+<p>D. Evidence</p>
+<p>27.14 An incident response plan spells out the actions to be carried out by each stakeholder in response to specific attacks.</p>
+<p>True</p>
+<p>28.1 The cleanroom strategy is based on the ______ software process model.</p>
+<p>B. incremental</p>
+<p>28.2 The cleanroom strategy relies on</p>
+<p>C. tests that exercise the software as it is really used</p>
+<p>28.5 This box specification describes an abstraction, stimuli, and response.</p>
+<p>A. black box</p>
+<p>28.6 This box specification describes the architectural design for some system component.</p>
+<p>C. state box</p>
+<p>28.7 This box specification is closely aligned with procedural design and structured programming.</p>
+<p>B. clear box</p>
+<p>28.14 A data invariant is a set of conditions that are true during the execution of any function.</p>
+<p>False</p>
+<p>28.15 In some formal languages, stored data that the system accesses and alters is called a(n)</p>
+<p>C. state</p>
+<p>28.16 In formal methods work, an action that reads or writes data to a state is called a(n)</p>
+<p>D. operation</p>
+<p>28.17 What defines the circumstances in which a particular operation is valid?</p>
+<p>B. precondition</p>
+<p>29.2 Which of the following is not considered one of the four important elements that should exist when a configuration management system is developed?</p>
+<p>A. component elements</p>
+<p>B. human elements</p>
+<p>C. process elements</p>
+<p><strong>D. validation elements</strong></p>
+<p>29.5 Modern software engineering practices usually attempt to maintain SCI's in a project database or repository.</p>
+<p>True</p>
+<p>29.8 The ability to track relationships and changes to configuration objects is one of the most important features of the SCM repository.</p>
+<p>True</p>
+<p>29.9 Which of the following tasks is not part of software configuration management?</p>
+<p>A. change control</p>
+<p>B. reporting</p>
+<p><strong>C. statistical quality control</strong></p>
+<p>D. version control</p>
+<p>29.10 A basic configuration object is a <strong><em>_</em></strong>___ created by a software engineer during some phase of the software development process.</p>
+<p>A. program data structure</p>
+<p>B. hardware driver</p>
+<p><strong>C. unit of information</strong></p>
+<p>D. all of the above</p>
+<p>29.11 Version control systems establish a change set as part of their primary functionality.</p>
+<p>False</p>
+<p>29.12 Change control is not necessary if a development group is making use of an automated project database tool.</p>
+<p>False</p>
+<p>29.13 When software configuration management is a formal activity the software configuration audit is conducted by the</p>
+<p>B. quality assurance group</p>
+<p>29.14 The primary purpose of configuration status reporting is to</p>
+<p>C. make sure that change information is communicated to all affected parties</p>
+<p>29.16 Web and Mobile App configuration objects can be managed in much the same way as conventional software configuration objects except for:</p>
+<p><strong>A. content items</strong></p>
+<p>B. functional items</p>
+<p>C. graphic items</p>
+<p>D. user items</p>
+<p>29.17 Content management establishes a process by which Web content is rendered on the user's display screen.</p>
+<p>False</p>
+<p>29.20 Requiring developers to check Web configuration items in and out and sending affected stakeholders e-mail messages automatically are good ways to deal with configuration auditing and reporting for WebApps.</p>
+<p>True</p>
+<p>30.2 Which these are reasons for using technical product measures during software development?</p>
+<p>A. large body of scientific evidence supports their use</p>
+<p><strong>B. provides software engineers with an objective mechanism for assessing software quality</strong></p>
+<p>C. they allow all quality software quality information to be expressed unambiguously as a single number</p>
+<p>D. all of the above</p>
+<p>30.3 Which measurement activity is missing from the list below? (这题是不是缺了题干？)</p>
+<p>A. design</p>
+<p><strong>B. feedback</strong></p>
+<p>C. measurement</p>
+<p>D. quantification</p>
+<p>30.5 One of the most important attributes for a software product metric is that it should be</p>
+<p>A. easy to compute</p>
+<p>30.7 The function point metric is an example of metric that can be used to assist with technical decision-making based on the analysis model information, without making use of historical project data.</p>
+<p>False</p>
+<p>30.8 The specification metrics proposed by Davis address which two characteristics of the software requirements?</p>
+<p>C. specificity and completeness</p>
+<p>30.10 Which of the following is not a measurable characteristic of an object-oriented design?</p>
+<p>A. completeness</p>
+<p><strong>B. efficiency</strong></p>
+<p>C. size</p>
+<p>D. volatility</p>
+<p>30.11 The depth of inheritance tree (DIT) metric can give an OO software designer a reading on the</p>
+<p>B. completion time required for system implementation</p>
+<p>30.13 If you encounter a class with a large responsibility (large class size or CS value) you should consider</p>
+<p>C. partitioning the class</p>
+<p>30.15 Because the class is the dominant unit in OO systems very few metrics have been proposed for operations that reside within a class.</p>
+<p>True</p>
+<p>30.16 Interface metrics are use to assess the complexity of the module's input and output relationships with external devices.</p>
+<p>False</p>
+<p>30.17 Most WebApps can be easily characterized by judicious use of widely recognized suites of software metrics?</p>
+<p>False</p>
+<p>30.20 The IEEE software maturity index (SMI) is used to provide a measure of the</p>
+<p>D. stability of a software product as it is modified during maintenance</p>
+<h2 id="3136">31~36 章</h2>
+<p>31.1 Effective software project management focuses on</p>
+<p>C. people, product, process, project</p>
+<p>31.3 The first step in project planning is to</p>
+<p>D. establish the objectives and scope.</p>
+<p>31.7 The best person to hire as a project team leader is the most competent software engineering practitioner available.</p>
+<p>False</p>
+<p>31.8 The best project team organizational model to use when tackling extremely complex problems is the</p>
+<p>B. open paradigm</p>
+<p>31.10 One of the best ways to avoid frustration during the software development process is to</p>
+<p>A. give team members more control over process and technical decisions.</p>
+<p>31.12 Which of these software characteristics is not a factor contributing to project coordination difficulties?</p>
+<p>A. interoperability</p>
+<p><strong>B. performance</strong></p>
+<p>C. scale</p>
+<p>D. uncertainty</p>
+<p>31.13 Which of these software characteristics are used to determine the scope of a software project?</p>
+<p>A. context, lines of code, function</p>
+<p>B. context, function, communication requirements</p>
+<p><strong>C. information objectives, function, performance</strong></p>
+<p>D. communications requirements, performance, information objectives</p>
+<p>31.15 Product and process decomposition occurs simultaneously as the project plan evolves.</p>
+<p>True</p>
+<p>31.16 When can selected common process framework activities be omitted during process decomposition?</p>
+<p>D. never the activities are invariant</p>
+<p>32.2 Process indicators enable a software project manager to</p>
+<p>D. none of the above</p>
+<p>32.5 Software quality and functionality must be measured indirectly.</p>
+<p>True</p>
+<p>32.8 There is no need to reconcile LOC and FP measures since each in meaningful in its own right as a project measure.</p>
+<p>False</p>
+<p>32.11 Which of the following is not a measure that can be collected from a Web application project?</p>
+<p><strong>A. Customization index</strong></p>
+<p>B. Number of dynamic objects</p>
+<p>C. Number of internal page links</p>
+<p>D. Number of static web pages</p>
+<p>32.12 Which of the following software quality factors is most likely to be affected by radical changes to computing architectures?</p>
+<p>A. operation</p>
+<p>B. transition</p>
+<p>C. revision</p>
+<p><strong>D. none of the above</strong></p>
+<p>32.14 A software quality metric that can be used at both the process and project levels is defect removal efficiency (DRE).</p>
+<p>True</p>
+<p>32.15 Why is it important to measure the process of software engineering and software it produces?</p>
+<p>C. To determine whether a software group is improving or not.</p>
+<p>33.4 Software feasibility is based on which of the following</p>
+<p>C. technology, finance, time, resources</p>
+<p>33.5 The number of people required for a software project is determined</p>
+<p><strong>A. after an estimate of the development effort is made.</strong></p>
+<p>B. by the size of the project budget.</p>
+<p>C. from an assessment of the technical complexity of the system.</p>
+<p>D. all of the above</p>
+<p>33.11 LOC-based estimation techniques require problem decomposition based on</p>
+<p>C. software functions</p>
+<p>33.12 FP-based estimation techniques require problem decomposition based on</p>
+<p>A. information domain values</p>
+<p>33.18 Putnam's software equation is a dynamic empirical model that has two independent parameters: a size estimate and an indication of project duration in calendar months or years.</p>
+<p>True</p>
+<p>33.20 In agile software development estimation techniques focus on the time required to complete each</p>
+<p>A. increment</p>
+<p>34.3 Which of the following is not one of the guiding principles of software project scheduling:</p>
+<p>A. compartmentalization</p>
+<p><strong>B. market assessment</strong></p>
+<p>C. time allocation</p>
+<p>D. effort validation</p>
+<p>34.5 The software equation can be used to show that by extending the project deadline slightly</p>
+<p>A. fewer people are required</p>
+<p>34.7 A task set is a collection of</p>
+<p>A. engineering work tasks, milestones, deliverables</p>
+<p>34.10 Two tools for computing critical path and project completion times from activity networks are</p>
+<p>A. CPM</p>
+<p>D. PERT</p>
+<p><strong>E. a and d</strong></p>
+<p>34.12 The best indicator of progress on a software project is the completion</p>
+<p>C. and successful review of a defined software work product</p>
+<p>35.1 Proactive risk management is sometimes described as fire fighting.</p>
+<p>False</p>
+<p>35.2 Software risk always involves two characteristics</p>
+<p>C. uncertainty and loss</p>
+<p>35.3 Three categories of risks are</p>
+<p>B. project risks, technical risks, business risks</p>
+<p>35.4 Generic risks require far more attention than product-specific risks.</p>
+<p>False</p>
+<p>35.7 Software risk impact assessment should focus on consequences affecting</p>
+<p>D. performance, support, cost, schedule</p>
+<p>35.8 Risk projection attempts to rate each risk in two ways</p>
+<p>C. likelihood and consequences</p>
+<p>35.9 Risk tables are sorted by</p>
+<p>B. probability and impact</p>
+<p>35.12 The reason for refining risks is to break them into smaller units having different consequences.</p>
+<p>False</p>
+<p>35.14 Risk monitoring involves watching the risk indicators defined for the project and not determining the effectiveness of the risk mitigation steps themselves.</p>
+<p>False</p>
+<p>35.16 Risk information sheets (RIS) are never an acceptable substitute for a full risk mitigation, monitoring, and management (RMMM) plan.</p>
+<p>False</p>
+<p>36.1 How much effort is typically expended by a software organization on software maintenance?</p>
+<p>C. 60 percent</p>
+<p>36.6 Which of the following activities is not part of the software reengineering process model?</p>
+<p>A. forward engineering</p>
+<p>B. inventory analysis</p>
+<p><strong>C. prototyping</strong></p>
+<p>D. reverse engineering</p>
+<p>36.8 Which of the following is not an issue to consider when reverse engineering?</p>
+<p>A. abstraction level</p>
+<p>B. completeness</p>
+<p><strong>C. connectivity</strong></p>
+<p>D. directionality</p>
+<p>36.10 The first reverse engineering activity involves seeking to understand</p>
+<p>B. processing</p>
+<p>36.11 Reverse engineering should proceed the reengineering of any user interface.</p>
+<p>True</p>
+<p>36.13 Code restructuring is a good example of software reengineering.</p>
+<p>False</p>
+<p>36.16 Reengineering client/server systems begins with a thorough analysis of the business environment that encompasses the existing computing system.</p>
+<p>True</p>
+<p>36.17 The only time reengineering enters into work with a legacy system is when it components will be implemented as objects.</p>
+<p>False</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Kaleo996" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/kaleo996" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:yihangchen2003@gmail.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "navigation.tabs", "navigation.path", "navigation.expand", "navigation.indexes", "navigation.instant"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.4e31edb1.min.js"></script>
+      
+        
+          <script src="../../javascripts/katex.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+        
+      
+        
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+        
+      
+    
+  </body>
+</html>
